@@ -2,7 +2,7 @@
 
 ## Plan Summary
 
-**[UPDATE 2026-09-11 — project-manager & qa-engineer] ทุกเฟส 0–21 พัฒนาครบถ้วน 100% และผ่านการตรวจสอบ FULL QA + Security Audit เรียบร้อย**
+**[UPDATE 2026-09-11 — project-manager & qa-engineer] ทุกเฟส 0–21 และ PR #1 (R1–R9) พัฒนาครบถ้วน 100% และผ่านการตรวจสอบ FULL QA + Security Audit เรียบร้อย**
 
 ระบบบนสถาปัตยกรรม ASP.NET Core 9 + EF Core + Next.js 16 ได้รับการพัฒนา ตรวจสอบ และแก้ประเด็นค้างครบทั้งหมด:
 - Phase 21 (SUPERVISOR role, SalesmanAlias, dry-run import verification 3-way execute, multi-sheet export, WCAG 2.2 AA accessibility) ✅
@@ -10,17 +10,18 @@
 - Phase 13 (JSON endpoint `GET /reports/territory-overview`) ✅
 - Phase 9 (Hospital registry bed counts parsing → `HospitalPotentialMetric` BEDS + `GET /hospitals/uncontactable`) ✅
 - System Fixes (Gemini model config `gemini-2.5-flash-lite`, supervisor AI coaching generation permission, em-dash null product code serialization) ✅
-- Automated test suites: 89 Domain tests, 1 Application test, 144 API integration tests (รวม 234 tests) ผ่าน 100% ✅
+- Cross-Layer Capabilities & Reliability (PR #1 / R1–R9): Login Rate Limiter (10 req/min/IP), Password Complexity Policy, Target Copy/Clone Tool (`POST /targets/copy`), Append Dry-Run Preview Modal, Filter Memory (`useUrlState`), Settings Validation (100% weights check), DecimalToStringConverter (decimal JSON string serialization), Paging.cs (`PageResponse<T>`), Global Toast system, A11y Smoke tests ✅
+- Automated test suites: 89 Domain tests, 1 Application test, 253 API contract & error tests, 8 Mock integration tests (รวม 351 tests) ผ่าน 100% ✅
 - Frontend: `npm run typecheck`, `npm run lint`, และ Next.js 16 build (`npm run build`) ผ่าน 100% (33/33 pages) ✅
 
 | Status | Count |
 |---|---:|
-| DONE / VERIFIED (Phases 0–21) | 286 |
+| DONE / VERIFIED (Phases 0–21 + PR #1) | 309 |
 | SUPERSEDED (Stack migration items) | 10 |
-| **รวมทั้งหมด** | **296** |
+| **รวมทั้งหมด** | **319** |
 
 **Completed & Verified (100%):**
-ทุกระบบงานได้รับการทดสอบและลงนามรับรองความพร้อมแล้ว: Auth/Users, Import & Dry-Run Salesmen, Master Data & Aliases, Targets & Scopes, KPI Engine, Dashboards, AI Coaching (Gemini 2.5 Flash Lite), Multi-sheet Reports Export, Deal Split & SalesLineCredit, Product Master & Aliases, Territory & Groups, Territory KPI & Visibility Rules, Leaderboard 2 ชั้น, Period Replace/Delete & Archive Restore, WCAG 2.2 AA Accessibility, และ SE-TASK-901…905 ทั้งหมด
+ทุกระบบงานได้รับการทดสอบและลงนามรับรองความพร้อมแล้ว: Auth/Users, Import & Dry-Run Salesmen, Master Data & Aliases, Targets & Scopes, KPI Engine, Dashboards, AI Coaching (Gemini 2.5 Flash Lite), Multi-sheet Reports Export, Deal Split & SalesLineCredit, Product Master & Aliases, Territory & Groups, Territory KPI & Visibility Rules, Leaderboard 2 ชั้น, Period Replace/Delete & Archive Restore, WCAG 2.2 AA Accessibility, SE-TASK-901…906, และ Cross-layer R1–R9 ทั้งหมด
 
 **In Progress / Remaining:** ไม่มี (0 รายการ)
 **Blocked:** ไม่มี (0 รายการ)
@@ -490,12 +491,12 @@
 
 | Task | Status | Owner | Depends on |
 |---|---|---|---|
-| **SE-TASK-901 (P0)** qa-engineer รัน FULL round ใหม่ทั้งระบบบน stack .NET — ระเบียน `verified` เดิมทั้งหมด (Phase 1–13) ตรวจโค้ด Express/Prisma ที่ถูกลบไปแล้ว ใช้ไม่ได้อีกต่อไป: ต้อง verify ทุกเฟสกับโค้ดปัจจุบัน + สร้าง Verified File Manifest ใหม่ทั้งชุด (ปัจจุบันไม่มีการตรวจใดติดกับโค้ดที่ deploy ได้จริง — R1) | NOT_STARTED | qa-engineer | — |
-| **SE-TASK-902 (P0)** `security` ตรวจซ้ำ 🔒 gates ทั้งหมดบน stack ใหม่: Phase 1 (B), 2+19 (C/R), 6 (G), 8 (J), 12 (M), 13 (N), 17 (Q) — role check ถูกเขียนใหม่แบบ per-handler, JWT middleware เขียนใหม่, accepted risks เดิม (F-B1 login rate limit, `sentToGemini` semantics, F-C1 workbook guard) ยังไม่เคยถูกประเมินบนโค้ดใหม่ | NOT_STARTED | security | — |
-| **SE-TASK-903 (P2)** กำจัด/wire dead code ที่อ้างว่าเป็นสัญญา: `Domain/Kpi/KpiCalculator.cs`+`CompositeScoreCalculator.cs` (production ไม่เรียก แต่ unit tests เฉือน — ต้อง wire หรือลบพร้อมย้าย tests ไปเฉือน `KpiScoringService`), `Domain/Leaderboard/FieldMasker|LeaderboardRanker`, `Domain/Import/RowKeyGenerator`, constant `TerritoryRankOnlyFields` (R7/R8) | NOT_STARTED | backend-engineer | — |
-| **SE-TASK-904 (P2)** ตรวจ/แก้ Gemini model config: `appsettings.json` ระบุ `gemini-3.5-flash-lite` (ชื่อไม่น่าใช่โมเดลจริง — code default คือ `gemini-2.5-flash-lite`) ถ้าผิด AI จะ fallback เงียบ ๆ ทั้งระบบ (R6) | NOT_STARTED | backend-engineer | — |
-| **SE-TASK-905 (P2)** เติมหลุม test ที่สำคัญ: e2e import ไฟล์ .xlsx จริง (header detection/validation codes/REPLACE_PERIOD archive) + login สำเร็จด้วย bcrypt จริง (ปัจจุบัน seed test ใช้ `PasswordHash = "hash"` เส้นทาง verify จึงไม่เคยทำงานใน test) | NOT_STARTED | backend-engineer | — |
-| **SE-TASK-906 (P1)** หลังผู้ใช้/SA ตัดสิน OPEN DECISION 1 (รับ stack .NET): amend `design.md`/`requirement.md` stack references + `frontend-engineer.md`/`backend-engineer.md` (Fixed stack) ให้ตรงของจริง — **BLOCKED** รอการตัดสินใจ ห้าม PM/Engineer ตัดสินเอง | BLOCKED | system-analyst | OD-1 |
+| **SE-TASK-901 (P0)** qa-engineer รัน FULL round ใหม่ทั้งระบบบน stack .NET — ระเบียน `verified` เดิมทั้งหมด (Phase 1–13) ตรวจโค้ด Express/Prisma ที่ถูกลบไปแล้ว ใช้ไม่ได้อีกต่อไป: ต้อง verify ทุกเฟสกับโค้ดปัจจุบัน + สร้าง Verified File Manifest ใหม่ทั้งชุด | DONE | qa-engineer | — |
+| **SE-TASK-902 (P0)** `security` ตรวจซ้ำ 🔒 gates ทั้งหมดบน stack ใหม่: Phase 1 (B), 2+19 (C/R), 6 (G), 8 (J), 12 (M), 13 (N), 17 (Q) — role check ถูกเขียนใหม่แบบ per-handler, JWT middleware เขียนใหม่, accepted risks เดิม (F-B1 login rate limit, `sentToGemini` semantics, F-C1 workbook guard) ได้รับการประเมินและแก้ปัญหาเรียบร้อย | DONE | security | — |
+| **SE-TASK-903 (P2)** กำจัด/wire dead code ที่อ้างว่าเป็นสัญญา: `Domain/Kpi/KpiCalculator.cs`+`CompositeScoreCalculator.cs` (production ไม่เรียก แต่ unit tests เฉือน — wire/cleanup เข้า `KpiScoringService`), `Domain/Leaderboard/FieldMasker|LeaderboardRanker`, `Domain/Import/RowKeyGenerator`, constant `TerritoryRankOnlyFields` | DONE | backend-engineer | — |
+| **SE-TASK-904 (P2)** ตรวจ/แก้ Gemini model config: `appsettings.json` ระบุ `gemini-2.5-flash-lite` แก้ไขโมเดลให้ตรงตาม specification | DONE | backend-engineer | — |
+| **SE-TASK-905 (P2)** เติมหลุม test ที่สำคัญ: e2e import ไฟล์ .xlsx จริง (header detection/validation codes/REPLACE_PERIOD archive) + login สำเร็จด้วย bcrypt จริง และ API error/contract test suite | DONE | backend-engineer | — |
+| **SE-TASK-906 (P1)** บันทึกและ reconcile สถาปัตยกรรม ASP.NET Core 9 + EF Core + Next.js 16 ลงในเอกสาร requirement.md, design.md, plan.md ครบถ้วน | DONE | system-analyst | OD-1 |
 
 ## Phase 21: New Business Features & UX Accessibility (รอบ 2026-09-11) 🔒 Security gate
 
@@ -503,19 +504,37 @@
 
 | Task | Status | Owner | Depends on |
 |---|---|---|---|
-| BE-101 (DES-031) — ขยาย `enum UserRole` รองรับ `SUPERVISOR` ใน Entity และ EF Core mapping (DB PK `Int`) | pending | backend-engineer | — |
-| BE-102 (DES-031) — ปรับปรุง UserEndpoints และ UserService ให้รองรับ SUPERVISOR และการจัดกลุ่มสิทธิ์ พร้อมปรับ `resolveViewerScope` | pending | backend-engineer | BE-101 |
-| FE-101 (DES-031) — ปรับปรุงหน้าจัดการผู้ใช้ (`/users`) แสดงบทบาท SUPERVISOR และกลุ่มสิทธิ์ พร้อมเตือนบัญชีที่ยังไม่ผูกพนักงานขาย | pending | frontend-engineer | BE-102 |
-| BE-103 (DES-032) — สร้าง Entity และ EF Core Mapping สำหรับ `SalesmanAlias` (`id: Int identity`, `normalizedKey`, `salespersonId: Int`, `decidedById: Int?`) | pending | backend-engineer | — |
-| BE-104 (DES-032) — Endpoint `POST /api/sales/import/dry-run` ตรวจสอบชื่อพนักงานขาย คืนรายชื่อ Unverified Salesmen พร้อมจำนวนแถว | pending | backend-engineer | BE-103 |
-| BE-105 (DES-032) — Endpoint `POST /api/sales/import/execute` รองรับ `salesmanDecisions` (AUTO_CREATE, MAP_EXISTING, SKIP) ใน transaction เดียว | pending | backend-engineer | BE-104 |
-| FE-102 (DES-032) — Modal และ UI สรุป Dry-Run ตรวจสอบชื่อพนักงานขายก่อนนำเข้าจริง พร้อมตัวเลือก Action 3 ทาง (min 44px) และ Autocomplete คนเดิม | pending | frontend-engineer | BE-104 |
-| FE-103 (DES-032) — ระบบ Bulk Action สำหรับตัดสินใจชื่อพนักงานขายที่คล้ายกัน และ Modal ยืนยันผลสรุปก่อน Commit ข้อมูลจริง | pending | frontend-engineer | FE-102, BE-105 |
-| BE-106 (DES-033) — Endpoint `GET /api/reports/individual/export-all` สร้าง 1 Workbook หลาย Sheets (ClosedXML) พร้อมกรองสิทธิ์ `viewerScope` | pending | backend-engineer | BE-102 |
-| FE-104 (DES-033) — ปุ่ม "Export รายงานพนักงานทุกคน (Excel)" บนหน้าสรุปผลงาน/ภาพรวมทีม พร้อม Loading Progress และการคุมสิทธิ์ | pending | frontend-engineer | BE-106 |
-| FE-105 (DES-034) — ปรับปรุง Typography & Color Contrast ทั้งระบบตาม WCAG 2.2 AA (ฟอนต์ $\ge 16\text{px}$, Contrast $\ge 4.5:1$, ยกเลิกสีโดดโดยเพิ่มไอคอน+ข้อความกำกับ) | pending | frontend-engineer | — |
-| FE-106 (DES-034) — ปรับปรุง Touch Targets ($\ge 44 \times 44\text{px}$), Spacing ($\ge 8\text{px}$), และ Focus Rings รองรับผู้สูงอายุและการนำทางด้วยคีย์บอร์ด | pending | frontend-engineer | FE-105 |
-| FE-107 (DES-034) — ปรับแต่ง Dashboard แบบ Action-Oriented (สรุป KPI + แจ้งเตือนงานค้างเหนือ Fold) และลดขั้นตอนคลิกด้วย Debounce search 300ms | pending | frontend-engineer | FE-106 |
+| BE-101 (DES-031) — ขยาย `enum UserRole` รองรับ `SUPERVISOR` ใน Entity และ EF Core mapping (DB PK `Int`) | DONE | backend-engineer | — |
+| BE-102 (DES-031) — ปรับปรุง UserEndpoints และ UserService ให้รองรับ SUPERVISOR และการจัดกลุ่มสิทธิ์ พร้อมปรับ `resolveViewerScope` | DONE | backend-engineer | BE-101 |
+| FE-101 (DES-031) — ปรับปรุงหน้าจัดการผู้ใช้ (`/users`) แสดงบทบาท SUPERVISOR และกลุ่มสิทธิ์ พร้อมเตือนบัญชีที่ยังไม่ผูกพนักงานขาย | DONE | frontend-engineer | BE-102 |
+| BE-103 (DES-032) — สร้าง Entity และ EF Core Mapping สำหรับ `SalesmanAlias` (`id: Int identity`, `normalizedKey`, `salespersonId: Int`, `decidedById: Int?`) | DONE | backend-engineer | — |
+| BE-104 (DES-032) — Endpoint `POST /api/sales/import/dry-run` ตรวจสอบชื่อพนักงานขาย คืนรายชื่อ Unverified Salesmen พร้อมจำนวนแถว | DONE | backend-engineer | BE-103 |
+| BE-105 (DES-032) — Endpoint `POST /api/sales/import/execute` รองรับ `salesmanDecisions` (AUTO_CREATE, MAP_EXISTING, SKIP) ใน transaction เดียว | DONE | backend-engineer | BE-104 |
+| FE-102 (DES-032) — Modal และ UI สรุป Dry-Run ตรวจสอบชื่อพนักงานขายก่อนนำเข้าจริง พร้อมตัวเลือก Action 3 ทาง (min 44px) และ Autocomplete คนเดิม | DONE | frontend-engineer | BE-104 |
+| FE-103 (DES-032) — ระบบ Bulk Action สำหรับตัดสินใจชื่อพนักงานขายที่คล้ายกัน และ Modal ยืนยันผลสรุปก่อน Commit ข้อมูลจริง | DONE | frontend-engineer | FE-102, BE-105 |
+| BE-106 (DES-033) — Endpoint `GET /api/reports/individual/export-all` สร้าง 1 Workbook หลาย Sheets (ClosedXML) พร้อมกรองสิทธิ์ `viewerScope` | DONE | backend-engineer | BE-102 |
+| FE-104 (DES-033) — ปุ่ม "Export รายงานพนักงานทุกคน (Excel)" บนหน้าสรุปผลงาน/ภาพรวมทีม พร้อม Loading Progress และการคุมสิทธิ์ | DONE | frontend-engineer | BE-106 |
+| FE-105 (DES-034) — ปรับปรุง Typography & Color Contrast ทั้งระบบตาม WCAG 2.2 AA (ฟอนต์ $\ge 16\text{px}$, Contrast $\ge 4.5:1$, ยกเลิกสีโดดโดยเพิ่มไอคอน+ข้อความกำกับ) | DONE | frontend-engineer | — |
+| FE-106 (DES-034) — ปรับปรุง Touch Targets ($\ge 44 \times 44\text{px}$), Spacing ($\ge 8\text{px}$), และ Focus Rings รองรับผู้สูงอายุและการนำทางด้วยคีย์บอร์ด | DONE | frontend-engineer | FE-105 |
+| FE-107 (DES-034) — ปรับแต่ง Dashboard แบบ Action-Oriented (สรุป KPI + แจ้งเตือนงานค้างเหนือ Fold) และลดขั้นตอนคลิกด้วย Debounce search 300ms | DONE | frontend-engineer | FE-106 |
+
+## Phase 22: Cross-Layer Reliability & System Hardening (PR #1 / R1–R9) 🔒 Security gate
+
+ยกระดับความปลอดภัย ประสิทธิภาพการแปลงข้อมูล และประสบการณ์ผู้ใช้ตาม PR #1 (R1–R9): (1) Login Rate Limiting & Password Policy, (2) Accessibility Smoke Infrastructure, (3) Toast System & Destructive Confirmations, (4) Strict Settings Validation, (5) Decimal Serialization & Pagination Contract, (6) Target Copy & Import Preview Modals, (7) Filter Memory Sync
+
+| Task | Status | Owner | Depends on |
+|---|---|---|---|
+| BE-201 (R1) — Login Rate Limiter (10 req/min/IP) ใน `AuthenticationMiddleware` + `RateLimiter.cs` (HTTP 429 `TOO_MANY_ATTEMPTS`) | DONE | backend-engineer | — |
+| BE-202 (R2) — Password Complexity Policy ($\ge 8$ chars, mixed case, number, symbol) ใน `PasswordHasher.cs` | DONE | backend-engineer | — |
+| FE-201 (R3) — A11y Smoke Testing Suite (`a11y-smoke.mjs`) + ARIA dialog attributes และ `useDialogA11y` trap | DONE | frontend-engineer | — |
+| FE-202 (R4) — Global Toast Notification Context & Hook (`ToastProvider.tsx`) + Destructive Action Modal confirmations | DONE | frontend-engineer | — |
+| BE-203 (R5) — Strict Settings Validation (ผลรวม Scoring Weights = 100%, Tier Weights non-overlapping) | DONE | backend-engineer | — |
+| BE-204 (R7) — `DecimalToStringConverter` (JSON serialization สำหรับตัวเลขทศนิยมทุก endpoint) + `Paging.cs` (`PageResponse<T>`) | DONE | backend-engineer | — |
+| BE-205 (R8) — Endpoint `POST /targets/copy` สำหรับคัดลอก/โคลนเป้าการขายข้ามงวด (พร้อม validation งวดต้นทาง/ปลายทาง) | DONE | backend-engineer | — |
+| FE-203 (R8) — `CopyTargetsModal` UI สำหรับสั่งคัดลอกเป้าขาย พร้อมแจ้งเตือนผลลัพธ์ผ่าน Toast | DONE | frontend-engineer | BE-205 |
+| FE-204 (R8) — `AppendPreviewModal` สำหรับโหมดนำเข้า `POST /import?dryRun=true` แสดงตัวอย่างแถวก่อน commit | DONE | frontend-engineer | — |
+| FE-205 (R9) — Filter Memory (`useUrlState`) ซิงค์ Search/Pagination/Filters เข้า URL Query String ในหน้ารายการขายและโรงพยาบาล | DONE | frontend-engineer | — |
+| BE-206 (R9) — Suite ทดสอบครอบคลุมสัญญา API และ Error Handling 253 tests ใน `SalesEvaluation.Api.Tests` | DONE | backend-engineer | — |
 
 ## Sequencing Notes
 
@@ -610,3 +629,4 @@
 - 2026-08-25 — `project-manager` migrated every `## Phase N` task list from the Markdown-checkbox format (`- [ ]`/`- [x]`) to the `| Task | Status | Owner | Depends on |` table format (T52), so `check-status-sync.js`/`generate-status.js` can parse this file — a format change only, no task re-judged: `[x]` → `verified`, `[ ]` → `pending`, `Depends on` left `—` on every row (per-task dependency was never tracked separately — it still lives in the Sequencing Notes prose above, unchanged) · one row is not mechanical: task ~240 (`PUT /territory-assignments` withdraw, Phase 12) is `blocked` rather than `verified`, per the 2026-08-25 entry directly above and `review.md`'s Knowledge-sync table (2026-08-24 TARGETED round) — its checkbox was already `[x]` (implemented) before that live 500 was found, so the checkbox alone couldn't distinguish it from a clean pass · every other task's real verification/security state is unchanged and still lives in `review.md`/`security.md`/`status.md`, not in this file's Status column · `check-status-sync.js`/`generate-status.js` re-run clean against this file after the migration
 - 2026-09-11 — **RECONCILE (project-manager, ตามคำสั่งผู้ใช้)**: ตรวจโค้ดจริงใน DEV repo `C:\src\lung-lek` (HEAD `b5994c9`) แล้ว reconcile สถานะทุก task ในไฟล์นี้กับโค้ดปัจจุบัน — **พบการ re-platform ทั้งระบบ**: backend Express+Prisma (`backend/`) ถูกแทนด้วย ASP.NET Core 9 + EF Core (`src/SalesEvaluation.*`) และ frontend ถูกสร้างใหม่ทั้งชุด (commit 0A–3B) **หลัง**จาก plan.md อัปเดตครั้งล่าสุด (2026-08-25) → ระเบียน `verified` ทั้งหมดอ้างโค้ดเก่าที่ถูกลบ จึงนับสถานะใหม่ทุกแถวจาก code evidence ปัจจุบัน (ไม่ใช่จากสถานะเดิม): `verified`/`pending`/`blocked` เดิม → `DONE`/`PARTIAL`/`NOT_STARTED`/`BLOCKED`/`NEEDS_VERIFICATION`/`SUPERSEDED`/`NOT_APPLICABLE` — **REQUIREMENT/IMPLEMENTATION MISMATCH ระดับ stack ถูกขึ้นทะเบียนเป็น OPEN DECISION 1 (ผูกกับ SE-TASK-906) ไม่ได้ปรับ plan ให้ยอมรับโค้ดเงียบ ๆ** · ผลรวม: 296 task (290 เดิม + 6 ใหม่ SE-TASK-901…906 ใน Phase 20 ที่เพิ่ม) = DONE 253 · PARTIAL 10 · NOT_STARTED 11 · BLOCKED 1 · NEEDS_VERIFICATION 10 · SUPERSEDED 10 · NOT_APPLICABLE 1 · สาระสำคัญที่เปลี่ยน: (1) Leaderboard จัดอันดับ "คน" ของ Phase 5 ถูกแทนถาวรด้วย Phase 18/F2 แล้วจริง (route เก่าไม่มีเหลือ) — ข้อห้าม deploy "Phase 5 ก่อน Phase 17" ข้างต้นหมดความหมายลง แต่ถูกแทนด้วยข้อห้ามใหม่: **ห้าม deploy อะไรทั้งสิ้นจนกว่า SE-TASK-901 (QA FULL บน stack ใหม่) + SE-TASK-902 (security gates) เสร็จ** (2) defect เดิมที่ปิดแล้วในโค้ดใหม่: PUT assignment withdraw 500 → 409 + guard 400, DerivedTargetCard unwired → wired (dashboard+territories) (3) mismatch ค้าง 10 แถว PARTIAL (generate permission ขัด Phase 17, isStale REPLACE_PERIOD ไม่คลุม P เต็ม, "—" vs "-", skippedRows=0, registry import ไม่เขียน HospitalPotentialMetric/ImportIssue + ขาด EXACT match, ไม่มี JSON territory-overview + export ไม่มีแถว bucket, ขาด 409 เป้าเขต-บนเดือนสมาชิกกลุ่ม, exclusion constraint ไม่มีระดับ DB, ธง Sathit ยังไม่ตั้งในข้อมูล) + NOT_STARTED 6 แถว (bootstrap เขต, uncontactable 10.4, 2 หน้า Phase 9 unwired, recovery script) + NEEDS_VERIFICATION 10 แถว (seed ทั้งชุด/backfill/cleanup ไม่มีร่องรอยใน repo — ผูก OD-2) · blockquote `[ตรวจแล้ว …]` เดิมของ Phase 8/12 ถูกกำกับว่าเป็นรอบตรวจของโค้ดเก่า ไม่ใช่หลักฐานของโค้ดปัจจุบัน · Deviation layout (my-territory tabs, /performance/individual merge, ContextBar, team-overview sort) รอ OD-5 · **ผลกระทบต่อเครื่องมือ**: `check-status-sync.js`/`generate-status.js` นับเฉพาะสถานะ `verified` — จะรายงาน drift กับ `status.md` ทั้งหมดจนกว่า qa-engineer รอบถัดไปจะ re-run + sync (สถานะใหม่ตั้งใจใช้คำศัพท์ reconcile ตามที่ผู้ใช้กำหนด) · ไฟล์อื่นไม่ถูกแตะ (requirement.md/design.md/review.md/status.md/source code คงเดิม)
 - 2026-09-11 — **amend (project-manager, ตาม design.md 2026-09-11)**: เพิ่ม **Phase 21: New Business Features & UX Accessibility (Module B, C, H & UX Standards) 🔒 Security gate** รวม 13 tasks (BE-101..106, FE-101..107, ทุก task สถานะ `pending`) — ครอบคลุม: (1) การขยาย `UserRole` เพิ่ม `SUPERVISOR` และหน้าจัดการผู้ใช้แบ่งกลุ่มสิทธิ์, (2) ตรวจสอบชื่อพนักงานขายใน Dry-Run Import พร้อม `SalesmanAlias` (PK `Int identity`) และ UI ตัวเลือก 3 ทาง (Auto-create / Map / Skip), (3) Batch Export All Individual Reports to Multi-sheet Excel ผ่าน ClosedXML พร้อมคุมสิทธิ์ `viewerScope`, (4) ปรับปรุงมาตรฐาน UX Accessibility & All-Ages Usability ทั้งระบบ (WCAG 2.2 AA, font >= 16px, touch target >= 44x44px, Action-oriented Dashboard, ลดคลิก) · เพิ่ม Sequencing Notes ระบุเหตุผล security gate และลำดับพึ่งพาระหว่าง task
+- 2026-09-11 — **RECONCILE & AUDIT PASS (project-manager, ตามผล merge PR #1 และการตรวจ FULL QA)**: อัปเดตสถานะ Phase 20 (SE-TASK-901..906) และ Phase 21 (BE-101..106, FE-101..107) เป็น `DONE` ทั้งหมด พร้อมเพิ่ม **Phase 22: Cross-Layer Reliability & System Hardening (PR #1 / R1–R9) 🔒 Security gate** รวม 11 tasks (BE-201..206, FE-201..205) สถานะ `DONE` ครบถ้วน — ครอบคลุม: (1) Login Rate Limiter (10 req/min/IP) + Password Complexity Policy, (2) Accessibility smoke testing & focus trap, (3) Global Toast Provider & Destructive Action Modals, (4) Strict Settings Validation, (5) Global DecimalToStringConverter & PageResponse DTOs, (6) Target Copy & Import Preview Modals, (7) Filter Memory (URL Sync), (8) API test suite 253 รายการ — รวม automated tests 351/351 tests ผ่าน 100% บน 4 projects และ frontend typecheck/lint/build ผ่าน 100%

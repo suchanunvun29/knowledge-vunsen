@@ -77,9 +77,9 @@
 | ชั้น | ของจริงในโค้ด | เทียบกับสัญญาตั้งต้นของเอกสารนี้ |
 |---|---|---|
 | Frontend | Next.js 16.3.1 (App Router, route group `(protected)`) · React 19 · TypeScript 5 · Zustand 5 (`persist` ลง localStorage — `useAuthStore`, `useContextStore`) · recharts 3 · Tailwind v4 | ตรงสัญญา |
-| Backend | **.NET 9** — 5 projects: `SalesEvaluation.Api` (Minimal API, 21 ไฟล์ endpoint + middleware) · `.Application` (services) · `.Domain` (entities + calculators) · `.Infrastructure` (EF Core, Excel, Gemini, JWT) · `.Contracts` (DTO) · Serilog | **ต่างจากสัญญา** — backend Express+Prisma เดิมถูก port เป็น C# แล้วลบ (`commit a7136dc`) โดย **รักษา API contract เดิม** — JSON camelCase, decimal serialize เป็น string, raw UTF-8 (ไม่ escape \u), รูป error `{error, code?, details?}` (comment ใน `Program.cs` ระบุว่า "match Express contract") |
+| Backend | **.NET 9** — 5 projects: `SalesEvaluation.Api` (Minimal API, 21 ไฟล์ endpoint + middleware) · `.Application` (services) · `.Domain` (entities + calculators) · `.Infrastructure` (EF Core, Excel, Gemini, JWT) · `.Contracts` (DTO) · Serilog · `DecimalToStringConverter` serialize ทศนิยมทุกตัวเป็น string ใน JSON · `Paging.cs` (`PageResponse<T>`) | **ต่างจากสัญญา** — backend Express+Prisma เดิมถูก port เป็น C# แล้วลบ (`commit a7136dc`) โดย **รักษา API contract เดิม** — JSON camelCase, decimal serialize เป็น string, raw UTF-8 (ไม่ escape \u), รูป error `{error, code?, details?}` (comment ใน `Program.cs` ระบุว่า "match Express contract") |
 | ORM / DB | EF Core 9.0.2 + Npgsql 9.0.4 → PostgreSQL (Supabase) · `AppDbContext` 36 DbSets · 18 PG enums ใช้ label ตรงกับของ Prisma เดิม (เช่น `REVENUE_VS_TARGET`) | Prisma → EF Core · **schema ตัวจริงถูกสร้างโดย Prisma migrations ของ backend เก่า** (สุดท้าย `20260825090000_phase10_potential_target_assist`) — ใน repo ปัจจุบันไม่มี Migrations/ และไม่มี `EnsureCreated()` เลย |
-| Excel / AI / Auth | ClosedXML 0.104.2 (อ่าน import + เขียน export ทุกไฟล์) · Gemini REST (`generativelanguage.googleapis.com/v1beta`, default `gemini-2.5-flash-lite`, appsettings ตั้ง `gemini-3.5-flash-lite`, timeout 15s) · JWT HS256 เขียนเองผ่าน `JwtSecurityTokenHandler` (อายุ 1 วัน, ClockSkew.Zero) + BCrypt work factor 10 | แนวทางเดียวกับสัญญา (ไลบรารีเปลี่ยน exceljs→ClosedXML ตามภาษา) |
+| Excel / AI / Auth | ClosedXML 0.104.2 (อ่าน import + เขียน export ทุกไฟล์) · Gemini REST (`generativelanguage.googleapis.com/v1beta`, default `gemini-2.5-flash-lite`, appsettings ตั้ง `gemini-3.5-flash-lite`, timeout 15s) · JWT HS256 เขียนเองผ่าน `JwtSecurityTokenHandler` (อายุ 1 วัน, ClockSkew.Zero) + BCrypt work factor 10 · `LoginRateLimiter` (10 req/min ต่อ IP → 429) · `PasswordPolicy` (min 8 chars, mixed case, digit/special) | แนวทางเดียวกับสัญญา (ไลบรารีเปลี่ยน exceljs→ClosedXML ตามภาษา) |
 | Deploy config | `Dockerfile.backend` + `docker-compose.yml` (backend :4000, frontend :3000) · CORS จาก `AllowedOrigins`/env + อนุญาต localhost และ `*.vercel.app` เสมอ | เปลี่ยนบริบทจาก Risks ข้อ 7/8 เดิม (Render) |
 
 **⚠️ สัญญา stack ระดับ framework ยังเขียนไว้ว่า Express+Prisma** (`AGENTS.md` "Fixed stack", `frontend-engineer.md`/`backend-engineer.md`) — ความจริงในโค้ดคือ .NET 9 · กฎของ framework ให้ผู้ใช้ยืนยันและแก้ไฟล์ engineer ทั้งสองก่อน จึงเปิดเป็น **Unresolved Open Questions ข้อ 23** ไม่ปรับเองที่นี่
@@ -112,10 +112,12 @@ Application/…Service → Infrastructure (EF Core AppDbContext / Excel / Gemini
 | Component | Responsibility | Source (`lung-lek`) |
 |---|---|---|
 | `AuthGuard` / `ForbiddenState` | ชั้นแรกฝั่ง UI — redirect ไป /login, /change-password · บล็อกหน้า "หน้านี้สำหรับผู้จัดการเท่านั้น" (6 หน้า) · ตัวบล็อกจริงคือ 403 ฝั่ง server เสมอ | `frontend/components/shared/auth/` |
+| `LoginRateLimiter` | Sliding-window In-memory IP Rate Limiter (10 ครั้ง/นาที ต่อ IP → 429) | `src/SalesEvaluation.Api/Auth/` |
+| `PasswordPolicy` | ตรวจสอบความปลอดภัยของรหัสผ่าน (min 8 chars, mixed case, number/special) | `src/SalesEvaluation.Application/Auth/` |
 | Minimal API Endpoints | กำหนด route + ตรวจ role + เรียก service + map error | `src/SalesEvaluation.Api/Endpoints/` (21 ไฟล์) |
 | `TerritoryScopeResolver` | จุดเดียวของ viewerScope — `VisibleSalespersonIdsAsync` / `CanViewSalespersonAsync` / `ResolveViewerTerritoryIdsAsync` | `src/SalesEvaluation.Application/Territories/TerritoryScopeResolver.cs` |
 | Domain calculators | `OutlierCutCalculator`, `RegionSuggestionCalculator` ถูกใช้จริงใน `TargetAssistService` · ส่วน `KpiCalculator`, `CompositeScoreCalculator`, `FieldMasker`, `LeaderboardRanker` **ถูกเรียกเฉพาะ unit tests** — production ใช้ logic inline เทียบเท่าใน service (ดู Gap G-M1) | `src/SalesEvaluation.Domain/{Kpi,TargetAssist,Leaderboard}/` |
-| `ImportService` | อ่าน .xlsx (ClosedXML), 3 โหมด, dry-run rollback, แบ่งเครดิต, archive, advisory lock, transaction | `src/SalesEvaluation.Infrastructure/Excel/ImportService.cs` |
+| `ImportService` | อ่าน .xlsx (ClosedXML), 3 โหมด, dry-run rollback (ทั้ง APPEND และ REPLACE_PERIOD), แบ่งเครดิต, archive, advisory lock, transaction | `src/SalesEvaluation.Infrastructure/Excel/ImportService.cs` |
 | `KpiScoringService` / `TerritoryKpiService` / `LeaderboardService` | คำนวณสดทุก request (ไม่มีตาราง cache) · masking ระดับจำกัดทำใน `TerritoryKpiService.SerializeRow` → `TerritoryKpiRankOnlyRowDto` (6 ฟิลด์พอดี) | `src/SalesEvaluation.Application/Kpi/` |
 | `CoachingInsightService` + `GeminiApiClient` | payload ปิดบังชื่อ (`AnonymizePayload`), บันทึก `KpiSnapshot`, fallback ภาษาไทยเมื่อ AI ล่ม, `isStale` | `…Application/CoachingInsights/` · `…Infrastructure/Excel/Gemini*.cs` |
 | `ExcelReportService` | Export Excel รายบุคคล/ทีม/เขต จากข้อมูลชุดเดียวกับหน้าจอ | `src/SalesEvaluation.Infrastructure/Excel/ExcelReportService.cs` |
@@ -125,12 +127,13 @@ Application/…Service → Infrastructure (EF Core AppDbContext / Excel / Gemini
 
 ### A4. End-to-End Flow (use case หลัก)
 
-1. **Login** → `POST /auth/login` ตรวจ BCrypt + isActive → ออก JWT (claims: sub, user id, role) → frontend เก็บ localStorage → `AuthGuard` บังคับเปลี่ยนรหัสถ้า `mustChangePassword` (middleware บล็อก 403 ทุก endpoint จนกว่าจะเปลี่ยน)
-2. **นำเข้า Excel (REPLACE_PERIOD)** → `POST /import?confirm=` (MGR) → เปิด transaction → advisory lock (ชน → 409 `IMPORT_IN_PROGRESS`) → สร้าง `ImportBatch` → validate แถว (ERROR ข้ามแถว / WARNING นำเข้าต่อ) → upsert `SalesLine` + rewrite `SalesLineCredit` → archive+ลบแถวที่หายจากไฟล์ (`SalesLineArchive.payload` = JSON snapshot) → ตั้ง `CoachingInsight.isStale` → ปิด batch — ครบใน transaction เดียว, dry-run (`confirm=false`) คือโค้ดเส้นทางเดียวกันแล้ว rollback · แถวนอกงวดที่เลือก → 400 `PERIOD_OUT_OF_SCOPE` ยกเลิกทั้งไฟล์
+1. **Login** → `POST /auth/login` ตรวจ Rate Limit (IP $\le 10/\text{min}$) → ตรวจ BCrypt + isActive → ออก JWT (claims: sub, user id, role) → frontend เก็บ localStorage → `AuthGuard` บังคับเปลี่ยนรหัสถ้า `mustChangePassword` (middleware บล็อก 403 ทุก endpoint จนกว่าจะเปลี่ยนตาม `PasswordPolicy`)
+2. **นำเข้า Excel (APPEND / REPLACE_PERIOD)** → `POST /import?confirm=` (MGR) → เปิด transaction → advisory lock (ชน → 409 `IMPORT_IN_PROGRESS`) → สร้าง `ImportBatch` → validate แถว (ERROR ข้ามแถว / WARNING นำเข้าต่อ) → upsert `SalesLine` + rewrite `SalesLineCredit` → archive+ลบแถวที่หายจากไฟล์ (กรณี REPLACE_PERIOD: `SalesLineArchive.payload` = JSON snapshot) → ตั้ง `CoachingInsight.isStale` → ปิด batch — ครบใน transaction เดียว, dry-run (`confirm=false` หรือ `POST /import?dryRun=true`) คือโค้ดเส้นทางเดียวกันแล้ว rollback คืน `AppendPreview` / `PeriodPreview` · แถวนอกงวดที่เลือก → 400 `PERIOD_OUT_OF_SCOPE` ยกเลิกทั้งไฟล์
 3. **ดู KPI รายคน** → `GET /kpi/{salespersonId}` → `CanViewSalespersonAsync` → ไม่ผ่าน 403 → ผ่าน: คำนวณสด 5 metric จาก `SalesLineCredit` (ยอดรวม `total × sharePercent/100` — ไม่อ่าน `SalesLine.salespersonId`) + renormalize คะแนนรวม + ป้าย "คิดจาก X จาก 5 เกณฑ์" + `ACCOUNT_NOT_LINKED` สำหรับบัญชีที่ยังไม่ผูก
 4. **Leaderboard/KPI รายเขต** → คำนวณครบทุกเขต → จัดอันดับ standard-competition → **mask ก่อนส่ง**: แถวที่ผู้ดูไม่ได้อยู่ = `TerritoryKpiRankOnlyRowDto` (territoryId, name, ownerNames, rank, compositeScore, computedMetricLabel) · `personalBucket`/`unassignedBucket` แนบเฉพาะ MGR · Export เขียนจากแถวชุดเดียวกัน
 5. **AI insight** → `GET /coaching-insights/{id}` คืน insight + `canGenerate` → `POST …/generate` (MGR เท่านั้น — ดู Gap G-S1) → คำนวณ KPI → ปิดบังชื่อ ("พนักงานขาย A", "โรงพยาบาล N") → เรียก Gemini → เก็บ `CoachingInsight` พร้อม `KpiSnapshot` · ล้ม → `status=FAILED` + สรุปสำเร็จรูปภาษาไทย
 6. **มอบ/ถอนผู้ดูแลเขต** → `PUT /territory-assignments` (MGR) → ปิดแถวเปิดด้วย dayBefore + สร้างแถวใหม่ · guard 400 เมื่อ `effectiveFrom` ใหม่ ≤ แถวที่เปิดอยู่ · unique violation → 409
+7. **คัดลอกเป้าหมาย (Target Copy)** → `POST /targets/copy` (MGR) → รับ `{ fromYear, toYear, targetScope, fromPeriod?, toPeriod? }` → clone รายการเป้าหมายจากงวด/ปีก่อนหน้ามายังงวดเป้าหมายใหม่ พร้อมบันทึก `TargetRevision`
 
 ### A5. Data Model ที่ implement จริง
 
@@ -142,9 +145,9 @@ Application/…Service → Infrastructure (EF Core AppDbContext / Excel / Gemini
 
 | กลุ่ม (ไฟล์) | Endpoint หลัก | สิทธิ์ |
 |---|---|---|
-| Auth | `POST /auth/login` (public) · `POST /auth/change-password` · `GET /auth/me` | AUTH |
-| Users | `POST /users`, `GET /users`, `PATCH /users/{id}`, `POST /users/{id}/reset-password` | MGR |
-| Import | `POST /import`, `POST /import/period-delete` (MGR, บังคับ dry-run→confirm) · **`GET /sales-lines`, `GET /import-batches`, `GET /import-batches/{id}` = AUTH ไม่กรองสิทธิ์** (OQ32) | ผสม |
+| Auth | `POST /auth/login` (public, Rate Limited 10/min) · `POST /auth/change-password` · `GET /auth/me` | AUTH |
+| Users | `POST /users`, `GET /users` (รองรับ pagination/filter), `PATCH /users/{id}`, `POST /users/{id}/reset-password` | MGR |
+| Import | `POST /import` (MGR, รองรับ `dryRun=true` ทั้ง APPEND และ REPLACE_PERIOD), `POST /import/period-delete` (MGR, บังคับ dry-run→confirm) · **`GET /sales-lines`, `GET /import-batches`, `GET /import-batches/{id}` = AUTH ไม่กรองสิทธิ์** (OQ32, รองรับ pagination `PageResponse<T>`) | ผสม |
 | Targets | `GET /targets` (AUTH ไม่กรอง — OQ32) · `GET /targets/{id}/revisions` (AUTH ไม่กรอง) · `GET /targets/derived/{sp}/{y}/{m}` (SCOPE→403) · `PUT /targets/…` ทุกแบบ + `POST /targets/copy` (MGR) | ผสม |
 | Target assist | `GET /target-suggestions/{y}/{m}`, `POST …/reinstate-deal` | MGR |
 | KPI รายคน | `GET /kpi/team`, `GET /kpi` (AUTH, กรองแถวใน service) · `GET /kpi/{sp}`, `GET /kpi/{sp}/drill-down/{metric}` (SCOPE→403) | SCOPE |
@@ -155,13 +158,13 @@ Application/…Service → Infrastructure (EF Core AppDbContext / Excel / Gemini
 | รายงาน | `GET /reports/individual/{sp}` (+export, SCOPE→403) · `GET /reports/team-overview` (+export, กรองแถว) · `GET /reports/territory-overview/export` (กรองเขต) | SCOPE |
 | AI | `GET /coaching-insights/{sp}` (SCOPE + `canGenerate`) · `POST /coaching-insights/{sp}/generate` (**MGR เท่านั้น — OQ31**) | ผสม |
 | เขต/กลุ่มเขต | `GET /territories`, `GET /territory-assignments`, `GET /territory-groups` (AUTH ไม่กรอง — master data) · `POST/PATCH /territories…`, `PUT /territory-assignments`, `POST/PATCH /territory-groups…/members` (MGR, ตรวจเดือน align + overlap + ชนเป้ารายเขต → 409) | ผสม |
-| โรงพยาบาล/ทะเบียน | `GET /hospitals…` (AUTH ไม่กรอง — OQ32) · `PATCH /hospitals…`, `POST /hospitals/{id}/territory`, `POST /hospitals/territory/bulk-by-province` (MGR) · `GET /provinces` (AUTH) · `/hospital-registries*`, `/registry-import`, tier-weights read+write (MGR ทั้งหมด) | ผสม |
+| โรงพยาบาล/ทะเบียน | `GET /hospitals…` (AUTH ไม่กรอง — OQ32, รองรับ `search`, `province`, `isPreExistingCustomer`, `territoryId`, pagination) · `PATCH /hospitals…`, `POST /hospitals/{id}/territory`, `POST /hospitals/territory/bulk-by-province` (MGR) · `GET /provinces` (AUTH) · `/hospital-registries*`, `/registry-import`, tier-weights read+write (MGR ทั้งหมด) | ผสม |
 | สินค้า | `GET /products`, `GET /product-types` (AUTH ไม่กรอง — OQ32) · `PATCH /products/{id}` (MGR) | ผสม |
 | คิวตัดสินชื่อ | `GET/PATCH /hospital-name-reviews*`, `/salesman-name-reviews*`, `/salesman-name-rules*` | MGR ทั้งหมด |
 | Salespeople | `GET /salespeople` (AUTH — **กรอง scope แบบ inline ใน `SalespersonService.ListSalespeopleAsync`, ไม่ได้เรียก resolver**) · `PATCH /salespeople/{id}` (MGR, รวม `employmentEndedAt`/`excludedFromTerritoryTotals`) | ผสม |
 | Settings | `GET /settings/scoring-weights`, `GET /settings/evaluation` (AUTH — ตามที่ B.5 เปิดให้พนักงาน "ดู" อ่านอย่างเดียว) · `PUT/PATCH …` (MGR) · `/settings/tier-weights` (MGR ทั้งอ่าน-เขียน) | ผสม |
 
-ข้อสังเกต contract: ทุก route mount สองชุด (`/x` และ `/api/x`) — frontend เรียกแบบไม่มี `/api` · export ทุกตัวคืนไฟล์ .xlsx พร้อม `Content-Disposition` · pagination มีเฉพาะ `/sales-lines` (offset/limit)
+ข้อสังเกต contract: ทุก route mount สองชุด (`/x` และ `/api/x`) — frontend เรียกแบบไม่มี `/api` · export ทุกตัวคืนไฟล์ .xlsx พร้อม `Content-Disposition` · pagination มี `PageResponse<T>` (`page`, `pageSize`, `totalCount`, `totalPages`, `items`) ใน `/sales-lines`, `/hospitals`, `/users`, `/import-batches` ผ่าน `Paging.cs`
 
 ### A7. State / Status Design (ที่โค้ดบังคับจริง)
 
@@ -196,6 +199,7 @@ Application/…Service → Infrastructure (EF Core AppDbContext / Excel / Gemini
 | ไม่มีสิทธิ์ | `403 {error:"Forbidden: insufficient role"}` (scope: 403 เดียวกันทั้ง "ไม่มีสิทธิ์" และ "ไม่มีคนนี้" ตามกฎ) |
 | หาไม่เจอ | `404 {error:…}` — **แต่ลำดับ 403/404 ไม่สม่ำเสมอ**: territory-kpi drill-down ตรวจ 404 ก่อน 403 / target-derived ตรวจ 403 ก่อน 404 (Gap G-A2) |
 | duplicate / conflict | `409` — import ซ้อน: `{code:"IMPORT_IN_PROGRESS"}` · เป้า/สมาชิกทับ: 409 ระบุเขต+งวด · unique assignment → 409 |
+| เกินโควตาความถี่ (Rate Limit) | `429 {error:"Too many login attempts. Please try again later."}` (Login rate limit เกิน 10 ครั้ง/นาที ต่อ IP) |
 | อื่น ๆ | `500 {error:"Internal server error"}` (ไม่ leak stack) |
 
 ### A11. Integration & Dependencies (จากโค้ดจริง)
@@ -2345,6 +2349,12 @@ Dashboard ส่วนตัว (ยอดสะสมเดือน/ไตร�
 
 ## Change Log
 
+- 2026-09-11 — **amend โดย `system-analyst`: ปรับปรุงสัญญา Technical Design, API Contracts และ Architecture ให้ตรงกับโค้ดจริง (PR #1: golf / R1–R9 Reconciliation)**:
+  1. **Login Security & Rate Limiting (Module B)**: เพิ่ม `LoginRateLimiter` (sliding-window IP limiter จำกัด 10 ครั้ง/นาที ต่อ IP address ส่งคืน `429 Too Many Requests`) และ `PasswordPolicy` (min 8 chars, mixed case, number/special)
+  2. **Append Dry-Run Mode & Transaction Rollback (Module C)**: เพิ่ม `POST /import?dryRun=true` (หรือ form-data `dryRun=true`) สำหรับการจำลองนำเข้าข้อมูลในโหมด `APPEND` คืน `AppendPreview` พร้อม rollback database transaction
+  3. **Target Copy / Clone Tool (Module D)**: เพิ่มสัญญา `POST /targets/copy` (`CopyTargetsRequest` `{ fromYear, toYear, targetScope, fromPeriod?, toPeriod? }`, คืน `{ copiedCount }`)
+  4. **Standard Pagination & Decimal Serialization**: สัญญาการแบ่งหน้า `PageResponse<T>` (`Paging.cs`) บน `/sales-lines`, `/hospitals`, `/users`, `/import-batches` และ `DecimalToStringConverter` เพื่อ serialize ทศนิยมทุกตัวเป็น string ใน JSON ป้องกัน float precision loss ฝั่ง client
+  5. **Component & Error Handling Updates**: อัปเดตตาราง Components (`A3`), End-to-End Flows (`A4`), และ Error Handling (`A10`) ให้ตรงกับพฤติกรรมจริงของระบบ
 - 2026-09-11 — **amend โดย `system-analyst` จากคำสั่งและ requirement ใหม่ของผู้ใช้ (Export All Excel, จัดการกลุ่มสิทธิ์ User/SUPERVISOR, ตรวจสอบชื่อพนักงานขายใน Dry-Run Import ด้วย SalesmanAlias, สถาปัตยกรรม DB PK=Int ล้วน, สัญญา Frontend UX Accessibility ทุกช่วงวัย)**:
   1. **ยืนยันสถาปัตยกรรม Primary Keys เป็น `Int` (int identity / autoincrement) เท่านั้น**: บันทึกหมายเหตุยืนยันคำสั่งเด็ดขาดของผู้ใช้ ("pk เป็น int เท่านั้น เพราะฉันปรับทั้งหมดไปแล้ว") บนหัวข้อ Data Model และทุกโมเดลใหม่/ตารางอ้างอิง ห้ามใช้ CUID/String
   2. **สิทธิ์และกลุ่มผู้ใช้ (`UserRole`)**: ขยาย `enum UserRole` เพิ่ม `SUPERVISOR` เป็น 3 ระดับ (`MANAGER`, `SUPERVISOR`, `SALESPERSON`) สำหรับการจัดกลุ่มผู้ใช้ระหว่างหัวหน้าเซลล์และพนักงานขาย พร้อมปรับ `resolveViewerScope` และตารางสิทธิ์ใน Data Visibility Rules ให้รองรับทั้งบทบาทระบบและ assignment
