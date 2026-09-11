@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P11-02
+kind: task
+title: "Seed script: สร้าง `ProductAlias` 1 แถวต่อ `Product` ที่มีอยู่แล้วทุกแถว โดย `normalizedKey = latinCore(product.name)` (reuse `nameNormalizer.util.ts` ของ Module J ห้ามเขียน normalizer ตัวที่สอง), `sa…"
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L203
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:0afa8c60afda7719e375ee08aa21fcac9daf1bc360901d63b38582d588ccf3ab
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 11
+  tag: backend
+  plan_status: verified
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [x] [backend] Seed script: สร้าง `ProductAlias` 1 แถวต่อ `Product` ที่มีอยู่แล้วทุกแถว โดย `normalizedKey = latinCore(product.name)` (reuse `nameNormalizer.util.ts` ของ Module J ห้ามเขียน normalizer ตัวที่สอง), `sampleRaw = product.name`, `source = AUTO`"

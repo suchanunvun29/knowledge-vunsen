@@ -1,0 +1,30 @@
+schema_version: 1
+id: FE-sales-evaluation-P10-02
+kind: task
+title: ปุ่ม "รับข้อเสนอ" — เขียน `suggested(sp)` ลง `Target` ผ่าน `PUT /targets/:salespersonId/:year/:month` เดิมของ Phase 3 (ไม่สร้าง endpoint เขียนเป้าใหม่) ผู้จัดการแก้ตัวเลขก่อนบันทึกได้เสมอ
+version: 3
+status: approved
+owner: frontend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L192
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:86aa82cef10686b7dfa142636513bb2ea845a5afdb1fbbf9a62b7285b359608d
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: frontend-engineer
+  phase: 10
+  tag: frontend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: '- [ ] [frontend] ปุ่ม "รับข้อเสนอ" — เขียน `suggested(sp)` ลง `Target` ผ่าน `PUT /targets/:salespersonId/:year/:month` เดิมของ Phase 3 (ไม่สร้าง endpoint เขียนเป้าใหม่) ผู้จัดการแก้ตัวเลขก่อนบันทึกได้เสมอ'

@@ -1,0 +1,30 @@
+schema_version: 1
+id: FE-sales-evaluation-P18-01
+kind: task
+title: สร้างหน้า Leaderboard ใหม่ทั้งหน้า (แทนที่หน้า Leaderboard เดิมของ Phase 5) — ตาราง/การ์ดจัดอันดับตามหน่วยเป้า, ตัวสลับเกณฑ์ 4 แบบ + ช่วงเวลา, แสดงเฉพาะ field ที่ server ส่งมาจริงตามระดับที่ผู้ดูได้ (…
+version: 3
+status: approved
+owner: frontend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L335
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:709d923bb18a0aa33d0a0710adec4cbfd7a9776d0d83b4dd8b88b8cdd9902506
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: frontend-engineer
+  phase: 18
+  tag: frontend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [frontend] สร้างหน้า Leaderboard ใหม่ทั้งหน้า (แทนที่หน้า Leaderboard เดิมของ Phase 5) — ตาราง/การ์ดจัดอันดับตามหน่วยเป้า, ตัวสลับเกณฑ์ 4 แบบ + ช่วงเวลา, แสดงเฉพาะ field ที่ server ส่งมาจริงตามระดับที่ผู้ดูได้ (ไม่ hardcode role check ฝั่ง client)"

@@ -1,0 +1,50 @@
+schema_version: 1
+id: DB-Hospital
+kind: db-schema
+title: "Database model: Hospital"
+version: 3
+status: approved
+owner: system-analyst
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:54:59.302Z
+updated_at: 2026-08-21T19:55:45.194Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/design.md#L167-L177
+    captured_at: 2026-08-21T19:54:59.302Z
+    digest: sha256:6040df6e067cf3719f162a9e8548ebd1d9a162399c57af6a39349d4c37005374
+    source_id: SRC-_docs-module-sales-evaluation-design.md
+    note: legacy import (T85)
+relations: []
+payload:
+  model: Hospital
+  fields:
+    - name: id
+      type: String
+      optional: false
+    - name: nameInFile
+      type: String
+      optional: false
+    - name: displayName
+      type: String
+      optional: false
+    - name: province
+      type: String?
+      optional: true
+    - name: isPreExistingCustomer
+      type: Boolean
+      optional: false
+    - name: createdAt
+      type: DateTime
+      optional: false
+    - name: updatedAt
+      type: DateTime
+      optional: false
+    - name: salesLines
+      type: SalesLine[]
+      optional: false
+  relations:
+    - SalesLine
+body: Migrated from _docs/module/sales-evaluation/design.md's Data Model, which CLAUDE.md makes the contract `backend-engineer` implements verbatim.

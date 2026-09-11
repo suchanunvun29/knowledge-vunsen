@@ -1,0 +1,30 @@
+schema_version: 1
+id: FE-sales-evaluation-P3-01
+kind: task
+title: หน้าตั้งเป้าแบบตารางทั้งทีมทั้งปีในหน้าเดียว (MANAGER เท่านั้นแก้ได้ — คนอื่นดูอย่างเดียว) — แถวต่อพนักงานขาย, คอลัมน์ต่อเดือน, inline edit สำหรับ revenueTarget/newCustomerTarget
+version: 3
+status: approved
+owner: frontend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L68
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:216732124fe972e149bbd929999e8e167000fc950634d865fb7ae8f95698f627
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: frontend-engineer
+  phase: 3
+  tag: frontend
+  plan_status: verified
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [x] [frontend] หน้าตั้งเป้าแบบตารางทั้งทีมทั้งปีในหน้าเดียว (MANAGER เท่านั้นแก้ได้ — คนอื่นดูอย่างเดียว) — แถวต่อพนักงานขาย, คอลัมน์ต่อเดือน, inline edit สำหรับ revenueTarget/newCustomerTarget"

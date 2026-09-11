@@ -1,0 +1,85 @@
+schema_version: 1
+id: DB-ImportBatch
+kind: db-schema
+title: "Database model: ImportBatch"
+version: 3
+status: approved
+owner: system-analyst
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:54:59.302Z
+updated_at: 2026-08-21T19:55:45.194Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/design.md#L257-L278
+    captured_at: 2026-08-21T19:54:59.302Z
+    digest: sha256:90f2c3fae5c9269a89bff026521345782fd66b22c11844ae60e278971f1ceb0c
+    source_id: SRC-_docs-module-sales-evaluation-design.md
+    note: legacy import (T85)
+relations: []
+payload:
+  model: ImportBatch
+  fields:
+    - name: id
+      type: String
+      optional: false
+    - name: fileName
+      type: String
+      optional: false
+    - name: fileSizeBytes
+      type: Int
+      optional: false
+    - name: uploadedById
+      type: String
+      optional: false
+    - name: uploadedBy
+      type: User
+      optional: false
+    - name: startedAt
+      type: DateTime
+      optional: false
+    - name: finishedAt
+      type: DateTime?
+      optional: true
+    - name: status
+      type: ImportStatus
+      optional: false
+    - name: sheetsFound
+      type: Json?
+      optional: true
+    - name: sheetsImported
+      type: Json?
+      optional: true
+    - name: totalRows
+      type: Int
+      optional: false
+    - name: insertedRows
+      type: Int
+      optional: false
+    - name: updatedRows
+      type: Int
+      optional: false
+    - name: skippedRows
+      type: Int
+      optional: false
+    - name: errorRows
+      type: Int
+      optional: false
+    - name: periodsTouched
+      type: Json?
+      optional: true
+    - name: errorMessage
+      type: String?
+      optional: true
+    - name: salesLines
+      type: SalesLine[]
+      optional: false
+    - name: issues
+      type: ImportIssue[]
+      optional: false
+  relations:
+    - ImportIssue
+    - SalesLine
+    - User
+body: Migrated from _docs/module/sales-evaluation/design.md's Data Model, which CLAUDE.md makes the contract `backend-engineer` implements verbatim.

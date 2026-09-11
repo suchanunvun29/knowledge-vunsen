@@ -1,0 +1,1649 @@
+schema_version: 1
+entries:
+  - path: knowledge/_adoption/contracts/backend-engineer.yaml
+    action: created
+    backup: null
+    stage: legacy-agents
+    at: 2026-08-21T19:52:44.595Z
+  - path: knowledge/_adoption/contracts/business-analyst.yaml
+    action: created
+    backup: null
+    stage: legacy-agents
+    at: 2026-08-21T19:52:44.595Z
+  - path: knowledge/_adoption/contracts/devops.yaml
+    action: created
+    backup: null
+    stage: legacy-agents
+    at: 2026-08-21T19:52:44.595Z
+  - path: knowledge/_adoption/contracts/frontend-engineer.yaml
+    action: created
+    backup: null
+    stage: legacy-agents
+    at: 2026-08-21T19:52:44.595Z
+  - path: knowledge/_adoption/contracts/project-manager.yaml
+    action: created
+    backup: null
+    stage: legacy-agents
+    at: 2026-08-21T19:52:44.595Z
+  - path: knowledge/_adoption/contracts/qa-engineer.yaml
+    action: created
+    backup: null
+    stage: legacy-agents
+    at: 2026-08-21T19:52:44.595Z
+  - path: knowledge/_adoption/contracts/security.yaml
+    action: created
+    backup: null
+    stage: legacy-agents
+    at: 2026-08-21T19:52:44.595Z
+  - path: knowledge/_adoption/contracts/setup.yaml
+    action: created
+    backup: null
+    stage: legacy-agents
+    at: 2026-08-21T19:52:44.595Z
+  - path: knowledge/_adoption/contracts/system-analyst.yaml
+    action: created
+    backup: null
+    stage: legacy-agents
+    at: 2026-08-21T19:52:44.595Z
+  - path: knowledge/_sources/SRC-CLAUDE.md.yaml
+    action: created
+    backup: null
+    stage: legacy-docs
+    at: 2026-08-21T19:53:42.811Z
+  - path: knowledge/_sources/SRC-_docs-module-sales-evaluation-review.md.yaml
+    action: created
+    backup: null
+    stage: legacy-docs
+    at: 2026-08-21T19:53:42.811Z
+  - path: knowledge/_project/architecture/DES-RULES-CLAUDE.yaml
+    action: created
+    backup: null
+    stage: legacy-docs
+    at: 2026-08-21T19:53:42.811Z
+  - path: knowledge/sales-evaluation/architecture/DES-DOC-DOCS-MODULE-SALES-EVALUATION-REVIEW.yaml
+    action: created
+    backup: null
+    stage: legacy-docs
+    at: 2026-08-21T19:53:42.811Z
+  - path: knowledge/_sources/SRC-_docs-module-sales-evaluation-design.md.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-User.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-Salesperson.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-Hospital.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-ProductType.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-Product.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-SalesLine.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-ImportBatch.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-ImportIssue.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-Target.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-TargetProductGroup.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-TargetRevision.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-ScoringWeight.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-ScoringWeightRevision.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-EvaluationSetting.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-CoachingInsight.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-SalesLineCredit.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-SalesmanNameRule.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-SalesmanNameRuleMember.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-HospitalAlias.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-HospitalNameReview.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-Region.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-ProvinceMapping.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-ProvinceAlias.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-HospitalRegistry.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-HospitalPotentialMetric.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-HospitalRegistryLink.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-TerritoryAssignment.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-TierWeight.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-Territory.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-HospitalTerritoryChange.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-ProductAlias.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-TerritoryGroup.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-TerritoryGroupMember.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/sales-evaluation/db-schema/DB-SalesLineArchive.yaml
+    action: created
+    backup: null
+    stage: legacy-design
+    at: 2026-08-21T19:54:59.302Z
+  - path: knowledge/_sources/SRC-_docs-module-sales-evaluation-plan.md.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P1-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P1-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P1-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P1-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P1-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P1-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P1-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P1-08.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P1-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P1-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P1-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P1-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P1-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P1-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P1-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-08.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-09.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-10.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-11.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-12.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-13.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-14.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P2-15.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P2-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P2-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P2-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P2-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P2-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P3-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P3-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P3-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P3-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P3-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P3-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P3-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P3-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P3-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P3-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-08.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-09.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-10.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-11.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-12.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-13.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P4-14.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P4-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P4-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P4-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P4-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P5-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P5-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P5-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P5-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P5-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P5-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P5-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P5-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P5-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P5-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P5-08.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P6-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P6-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P6-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P6-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P6-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P6-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P6-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P6-08.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P6-09.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P6-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P6-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P6-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P6-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P6-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P7-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P7-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P7-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P7-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P7-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P7-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P7-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P7-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-08.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-09.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-10.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-11.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-12.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-13.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P8-14.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P8-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P8-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P8-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-08.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-09.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-10.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-11.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-12.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-13.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-14.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P9-15.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P9-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P9-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P9-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P9-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P9-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-08.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-09.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-10.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-11.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-12.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-13.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-14.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-15.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-16.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P10-17.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P10-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P10-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P10-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P10-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P10-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P10-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P11-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P11-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P11-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P11-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P11-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P11-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P11-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-08.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-09.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-10.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-11.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-12.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-13.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-14.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-15.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-16.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-17.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-18.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-19.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-20.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-21.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-22.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-23.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-24.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-25.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P12-26.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P12-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P12-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P12-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P12-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P12-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P12-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P12-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-08.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-09.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-10.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-11.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-12.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-13.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P13-14.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P13-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P13-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P13-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P13-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P14-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P14-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P14-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P14-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P14-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P14-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P14-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P15-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P15-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P15-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P15-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P15-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P15-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P15-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P16-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P16-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P16-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P16-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P16-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P16-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P17-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P17-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P17-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P17-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P17-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P17-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P17-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P17-08.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P17-09.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P17-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P17-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P17-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P17-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P17-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P18-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P18-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P18-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P18-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P18-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P18-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P18-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P18-08.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P18-09.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P18-10.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P18-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P18-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P18-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P18-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P18-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P18-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P19-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P19-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P19-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P19-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P19-05.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P19-06.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P19-07.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P19-08.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P19-09.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P19-10.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P19-11.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/BE-sales-evaluation-P19-12.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P19-01.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P19-02.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P19-03.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+  - path: knowledge/sales-evaluation/task/FE-sales-evaluation-P19-04.yaml
+    action: created
+    backup: null
+    stage: legacy-plan
+    at: 2026-08-21T19:55:50.056Z
+created_at: 2026-08-21T19:52:44.595Z
+updated_at: 2026-08-21T19:55:50.056Z

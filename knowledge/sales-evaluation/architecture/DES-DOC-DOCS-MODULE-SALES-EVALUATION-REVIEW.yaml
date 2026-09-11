@@ -1,0 +1,28 @@
+schema_version: 1
+id: DES-DOC-DOCS-MODULE-SALES-EVALUATION-REVIEW
+kind: architecture
+title: ระบบประเมินและสนับสนุนพนักงานขาย (Sales Evaluation) — Verification & Review
+version: 3
+status: approved
+owner: system-analyst
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:53:42.811Z
+updated_at: 2026-08-21T19:54:57.305Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/review.md
+    captured_at: 2026-08-21T19:53:42.811Z
+    digest: sha256:f79fd7034b9a624e677d05e390991caecd693d25fef6dd6cd33887acaf8600ad
+    source_id: SRC-_docs-module-sales-evaluation-review.md
+    note: legacy import (T83)
+relations: []
+payload:
+  feasibility: unknown
+  risks: []
+  component: null
+body: |-
+  | Issue | Phase | Routes to | Blocking | |---|---|---|---| | `skippedRows` on `ImportBatch` is never populated by any code path (blank rows silently `continue`d without incrementing it) — the field's definition vs `errorRows` needs to be clarified in `design.md` | Phase 2 (Module C) → `review/phase-2.md` | `system-analyst` (or the user decides the definition directly) | No — cosmetic/informational…
+
+  Sections: Open Issues — all phases · Verification Summary (current round) · Verified File Manifest — Phase 11 (FULL round) · Per-Task Results — Phase 11 (this round) · Design/requirement contract checks — Phase 11 (this round) · Unverified Behaviour — undeployed phases · Issues Found — Phase 11 (this round) · Review Outcome — Phase 11 (FULL round) · Archived rounds · Change Log

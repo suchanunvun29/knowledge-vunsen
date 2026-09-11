@@ -1,0 +1,49 @@
+schema_version: 1
+id: DB-HospitalTerritoryChange
+kind: db-schema
+title: "Database model: HospitalTerritoryChange"
+version: 3
+status: approved
+owner: system-analyst
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:54:59.302Z
+updated_at: 2026-08-21T19:55:45.194Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/design.md#L806-L818
+    captured_at: 2026-08-21T19:54:59.302Z
+    digest: sha256:b27e589d3c335b4c35b7ab5337227134f8032fde34fbb9d3184eb2d6e79899c4
+    source_id: SRC-_docs-module-sales-evaluation-design.md
+    note: legacy import (T85)
+relations: []
+payload:
+  model: HospitalTerritoryChange
+  fields:
+    - name: id
+      type: String
+      optional: false
+    - name: hospitalId
+      type: String?
+      optional: true
+    - name: registryId
+      type: String?
+      optional: true
+    - name: fromTerritoryId
+      type: String?
+      optional: true
+    - name: toTerritoryId
+      type: String?
+      optional: true
+    - name: changedById
+      type: String?
+      optional: true
+    - name: changedAt
+      type: DateTime
+      optional: false
+    - name: note
+      type: String?
+      optional: true
+  relations: []
+body: Migrated from _docs/module/sales-evaluation/design.md's Data Model, which CLAUDE.md makes the contract `backend-engineer` implements verbatim.

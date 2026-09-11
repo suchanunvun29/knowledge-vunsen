@@ -1,0 +1,1222 @@
+schema_version: 1
+status: adopted
+preflight:
+  detected_at: 2026-08-21T19:46:54.720Z
+  blockers:
+    - sales-evaluation/review.md lists 13 open QA issue(s) — work the pipeline
+      already routed to somebody
+  notes:
+    - no `.workflow/state.db` — this project has no orchestrator run history to
+      collide with
+    - sales-evaluation/plan.md has no in_progress task
+  acknowledged_by: vunsen
+  acknowledged_at: 2026-08-21T19:52:43.108Z
+stages:
+  - id: legacy-agents
+    status: done
+    completed_at: 2026-08-21T19:52:44.595Z
+    knowledge_ids: []
+    approved_by: vunsen
+    approved_at: 2026-08-21T19:53:41.273Z
+    contract_ids:
+      - backend-engineer
+      - business-analyst
+      - devops
+      - frontend-engineer
+      - project-manager
+      - qa-engineer
+      - security
+      - setup
+      - system-analyst
+  - id: legacy-docs
+    status: done
+    completed_at: 2026-08-21T19:53:42.811Z
+    knowledge_ids:
+      - DES-RULES-CLAUDE
+      - DES-DOC-DOCS-MODULE-SALES-EVALUATION-REVIEW
+    approved_by: vunsen
+    approved_at: 2026-08-21T19:54:57.305Z
+    note: _docs/module/sales-evaluation/requirement.md produced no item — nothing in
+      it matched what this stage knows how to read
+  - id: legacy-design
+    status: done
+    completed_at: 2026-08-21T19:54:59.302Z
+    knowledge_ids:
+      - DB-User
+      - DB-Salesperson
+      - DB-Hospital
+      - DB-ProductType
+      - DB-Product
+      - DB-SalesLine
+      - DB-ImportBatch
+      - DB-ImportIssue
+      - DB-Target
+      - DB-TargetProductGroup
+      - DB-TargetRevision
+      - DB-ScoringWeight
+      - DB-ScoringWeightRevision
+      - DB-EvaluationSetting
+      - DB-CoachingInsight
+      - DB-SalesLineCredit
+      - DB-SalesmanNameRule
+      - DB-SalesmanNameRuleMember
+      - DB-HospitalAlias
+      - DB-HospitalNameReview
+      - DB-Region
+      - DB-ProvinceMapping
+      - DB-ProvinceAlias
+      - DB-HospitalRegistry
+      - DB-HospitalPotentialMetric
+      - DB-HospitalRegistryLink
+      - DB-TerritoryAssignment
+      - DB-TierWeight
+      - DB-Territory
+      - DB-HospitalTerritoryChange
+      - DB-ProductAlias
+      - DB-TerritoryGroup
+      - DB-TerritoryGroupMember
+      - DB-SalesLineArchive
+    approved_by: vunsen
+    approved_at: 2026-08-21T19:55:45.194Z
+    note: _docs/module/sales-evaluation/design.md's feasibility section has no
+      DES-NNN row — nothing to key an architecture item on · merged 2 repeated
+      declarations of DB-Target into one db-schema item · merged 3 repeated
+      declarations of DB-TerritoryAssignment into one db-schema item
+  - id: legacy-plan
+    status: done
+    completed_at: 2026-08-21T19:55:50.056Z
+    knowledge_ids:
+      - BE-sales-evaluation-P1-01
+      - BE-sales-evaluation-P1-02
+      - BE-sales-evaluation-P1-03
+      - BE-sales-evaluation-P1-04
+      - BE-sales-evaluation-P1-05
+      - BE-sales-evaluation-P1-06
+      - BE-sales-evaluation-P1-07
+      - BE-sales-evaluation-P1-08
+      - FE-sales-evaluation-P1-01
+      - FE-sales-evaluation-P1-02
+      - FE-sales-evaluation-P1-03
+      - FE-sales-evaluation-P1-04
+      - FE-sales-evaluation-P1-05
+      - FE-sales-evaluation-P1-06
+      - FE-sales-evaluation-P1-07
+      - BE-sales-evaluation-P2-01
+      - BE-sales-evaluation-P2-02
+      - BE-sales-evaluation-P2-03
+      - BE-sales-evaluation-P2-04
+      - BE-sales-evaluation-P2-05
+      - BE-sales-evaluation-P2-06
+      - BE-sales-evaluation-P2-07
+      - BE-sales-evaluation-P2-08
+      - BE-sales-evaluation-P2-09
+      - BE-sales-evaluation-P2-10
+      - BE-sales-evaluation-P2-11
+      - BE-sales-evaluation-P2-12
+      - BE-sales-evaluation-P2-13
+      - BE-sales-evaluation-P2-14
+      - BE-sales-evaluation-P2-15
+      - FE-sales-evaluation-P2-01
+      - FE-sales-evaluation-P2-02
+      - FE-sales-evaluation-P2-03
+      - FE-sales-evaluation-P2-04
+      - FE-sales-evaluation-P2-05
+      - BE-sales-evaluation-P3-01
+      - BE-sales-evaluation-P3-02
+      - BE-sales-evaluation-P3-03
+      - BE-sales-evaluation-P3-04
+      - BE-sales-evaluation-P3-05
+      - BE-sales-evaluation-P3-06
+      - FE-sales-evaluation-P3-01
+      - FE-sales-evaluation-P3-02
+      - FE-sales-evaluation-P3-03
+      - FE-sales-evaluation-P3-04
+      - BE-sales-evaluation-P4-01
+      - BE-sales-evaluation-P4-02
+      - BE-sales-evaluation-P4-03
+      - BE-sales-evaluation-P4-04
+      - BE-sales-evaluation-P4-05
+      - BE-sales-evaluation-P4-06
+      - BE-sales-evaluation-P4-07
+      - BE-sales-evaluation-P4-08
+      - BE-sales-evaluation-P4-09
+      - BE-sales-evaluation-P4-10
+      - BE-sales-evaluation-P4-11
+      - BE-sales-evaluation-P4-12
+      - BE-sales-evaluation-P4-13
+      - BE-sales-evaluation-P4-14
+      - FE-sales-evaluation-P4-01
+      - FE-sales-evaluation-P4-02
+      - FE-sales-evaluation-P4-03
+      - FE-sales-evaluation-P4-04
+      - BE-sales-evaluation-P5-01
+      - BE-sales-evaluation-P5-02
+      - BE-sales-evaluation-P5-03
+      - FE-sales-evaluation-P5-01
+      - FE-sales-evaluation-P5-02
+      - FE-sales-evaluation-P5-03
+      - FE-sales-evaluation-P5-04
+      - FE-sales-evaluation-P5-05
+      - FE-sales-evaluation-P5-06
+      - FE-sales-evaluation-P5-07
+      - FE-sales-evaluation-P5-08
+      - BE-sales-evaluation-P6-01
+      - BE-sales-evaluation-P6-02
+      - BE-sales-evaluation-P6-03
+      - BE-sales-evaluation-P6-04
+      - BE-sales-evaluation-P6-05
+      - BE-sales-evaluation-P6-06
+      - BE-sales-evaluation-P6-07
+      - BE-sales-evaluation-P6-08
+      - BE-sales-evaluation-P6-09
+      - FE-sales-evaluation-P6-01
+      - FE-sales-evaluation-P6-02
+      - FE-sales-evaluation-P6-03
+      - FE-sales-evaluation-P6-04
+      - FE-sales-evaluation-P6-05
+      - BE-sales-evaluation-P7-01
+      - BE-sales-evaluation-P7-02
+      - BE-sales-evaluation-P7-03
+      - BE-sales-evaluation-P7-04
+      - BE-sales-evaluation-P7-05
+      - FE-sales-evaluation-P7-01
+      - FE-sales-evaluation-P7-02
+      - FE-sales-evaluation-P7-03
+      - BE-sales-evaluation-P8-01
+      - BE-sales-evaluation-P8-02
+      - BE-sales-evaluation-P8-03
+      - BE-sales-evaluation-P8-04
+      - BE-sales-evaluation-P8-05
+      - BE-sales-evaluation-P8-06
+      - BE-sales-evaluation-P8-07
+      - BE-sales-evaluation-P8-08
+      - BE-sales-evaluation-P8-09
+      - BE-sales-evaluation-P8-10
+      - BE-sales-evaluation-P8-11
+      - BE-sales-evaluation-P8-12
+      - BE-sales-evaluation-P8-13
+      - BE-sales-evaluation-P8-14
+      - FE-sales-evaluation-P8-01
+      - FE-sales-evaluation-P8-02
+      - FE-sales-evaluation-P8-03
+      - BE-sales-evaluation-P9-01
+      - BE-sales-evaluation-P9-02
+      - BE-sales-evaluation-P9-03
+      - BE-sales-evaluation-P9-04
+      - BE-sales-evaluation-P9-05
+      - BE-sales-evaluation-P9-06
+      - BE-sales-evaluation-P9-07
+      - BE-sales-evaluation-P9-08
+      - BE-sales-evaluation-P9-09
+      - BE-sales-evaluation-P9-10
+      - BE-sales-evaluation-P9-11
+      - BE-sales-evaluation-P9-12
+      - BE-sales-evaluation-P9-13
+      - BE-sales-evaluation-P9-14
+      - BE-sales-evaluation-P9-15
+      - FE-sales-evaluation-P9-01
+      - FE-sales-evaluation-P9-02
+      - FE-sales-evaluation-P9-03
+      - FE-sales-evaluation-P9-04
+      - FE-sales-evaluation-P9-05
+      - BE-sales-evaluation-P10-01
+      - BE-sales-evaluation-P10-02
+      - BE-sales-evaluation-P10-03
+      - BE-sales-evaluation-P10-04
+      - BE-sales-evaluation-P10-05
+      - BE-sales-evaluation-P10-06
+      - BE-sales-evaluation-P10-07
+      - BE-sales-evaluation-P10-08
+      - BE-sales-evaluation-P10-09
+      - BE-sales-evaluation-P10-10
+      - BE-sales-evaluation-P10-11
+      - BE-sales-evaluation-P10-12
+      - BE-sales-evaluation-P10-13
+      - BE-sales-evaluation-P10-14
+      - BE-sales-evaluation-P10-15
+      - BE-sales-evaluation-P10-16
+      - BE-sales-evaluation-P10-17
+      - FE-sales-evaluation-P10-01
+      - FE-sales-evaluation-P10-02
+      - FE-sales-evaluation-P10-03
+      - FE-sales-evaluation-P10-04
+      - FE-sales-evaluation-P10-05
+      - FE-sales-evaluation-P10-06
+      - BE-sales-evaluation-P11-01
+      - BE-sales-evaluation-P11-02
+      - BE-sales-evaluation-P11-03
+      - BE-sales-evaluation-P11-04
+      - BE-sales-evaluation-P11-05
+      - BE-sales-evaluation-P11-06
+      - FE-sales-evaluation-P11-01
+      - BE-sales-evaluation-P12-01
+      - BE-sales-evaluation-P12-02
+      - BE-sales-evaluation-P12-03
+      - BE-sales-evaluation-P12-04
+      - BE-sales-evaluation-P12-05
+      - BE-sales-evaluation-P12-06
+      - BE-sales-evaluation-P12-07
+      - BE-sales-evaluation-P12-08
+      - BE-sales-evaluation-P12-09
+      - BE-sales-evaluation-P12-10
+      - BE-sales-evaluation-P12-11
+      - BE-sales-evaluation-P12-12
+      - BE-sales-evaluation-P12-13
+      - BE-sales-evaluation-P12-14
+      - BE-sales-evaluation-P12-15
+      - BE-sales-evaluation-P12-16
+      - BE-sales-evaluation-P12-17
+      - BE-sales-evaluation-P12-18
+      - BE-sales-evaluation-P12-19
+      - BE-sales-evaluation-P12-20
+      - BE-sales-evaluation-P12-21
+      - BE-sales-evaluation-P12-22
+      - BE-sales-evaluation-P12-23
+      - BE-sales-evaluation-P12-24
+      - BE-sales-evaluation-P12-25
+      - BE-sales-evaluation-P12-26
+      - FE-sales-evaluation-P12-01
+      - FE-sales-evaluation-P12-02
+      - FE-sales-evaluation-P12-03
+      - FE-sales-evaluation-P12-04
+      - FE-sales-evaluation-P12-05
+      - FE-sales-evaluation-P12-06
+      - FE-sales-evaluation-P12-07
+      - BE-sales-evaluation-P13-01
+      - BE-sales-evaluation-P13-02
+      - BE-sales-evaluation-P13-03
+      - BE-sales-evaluation-P13-04
+      - BE-sales-evaluation-P13-05
+      - BE-sales-evaluation-P13-06
+      - BE-sales-evaluation-P13-07
+      - BE-sales-evaluation-P13-08
+      - BE-sales-evaluation-P13-09
+      - BE-sales-evaluation-P13-10
+      - BE-sales-evaluation-P13-11
+      - BE-sales-evaluation-P13-12
+      - BE-sales-evaluation-P13-13
+      - BE-sales-evaluation-P13-14
+      - FE-sales-evaluation-P13-01
+      - FE-sales-evaluation-P13-02
+      - FE-sales-evaluation-P13-03
+      - FE-sales-evaluation-P13-04
+      - BE-sales-evaluation-P14-01
+      - BE-sales-evaluation-P14-02
+      - BE-sales-evaluation-P14-03
+      - BE-sales-evaluation-P14-04
+      - BE-sales-evaluation-P14-05
+      - BE-sales-evaluation-P14-06
+      - FE-sales-evaluation-P14-01
+      - BE-sales-evaluation-P15-01
+      - BE-sales-evaluation-P15-02
+      - BE-sales-evaluation-P15-03
+      - BE-sales-evaluation-P15-04
+      - BE-sales-evaluation-P15-05
+      - BE-sales-evaluation-P15-06
+      - FE-sales-evaluation-P15-01
+      - BE-sales-evaluation-P16-01
+      - BE-sales-evaluation-P16-02
+      - BE-sales-evaluation-P16-03
+      - BE-sales-evaluation-P16-04
+      - BE-sales-evaluation-P16-05
+      - FE-sales-evaluation-P16-01
+      - BE-sales-evaluation-P17-01
+      - BE-sales-evaluation-P17-02
+      - BE-sales-evaluation-P17-03
+      - BE-sales-evaluation-P17-04
+      - BE-sales-evaluation-P17-05
+      - BE-sales-evaluation-P17-06
+      - BE-sales-evaluation-P17-07
+      - BE-sales-evaluation-P17-08
+      - BE-sales-evaluation-P17-09
+      - FE-sales-evaluation-P17-01
+      - FE-sales-evaluation-P17-02
+      - FE-sales-evaluation-P17-03
+      - FE-sales-evaluation-P17-04
+      - FE-sales-evaluation-P17-05
+      - BE-sales-evaluation-P18-01
+      - BE-sales-evaluation-P18-02
+      - BE-sales-evaluation-P18-03
+      - BE-sales-evaluation-P18-04
+      - BE-sales-evaluation-P18-05
+      - BE-sales-evaluation-P18-06
+      - BE-sales-evaluation-P18-07
+      - BE-sales-evaluation-P18-08
+      - BE-sales-evaluation-P18-09
+      - BE-sales-evaluation-P18-10
+      - FE-sales-evaluation-P18-01
+      - FE-sales-evaluation-P18-02
+      - FE-sales-evaluation-P18-03
+      - FE-sales-evaluation-P18-04
+      - FE-sales-evaluation-P18-05
+      - FE-sales-evaluation-P18-06
+      - BE-sales-evaluation-P19-01
+      - BE-sales-evaluation-P19-02
+      - BE-sales-evaluation-P19-03
+      - BE-sales-evaluation-P19-04
+      - BE-sales-evaluation-P19-05
+      - BE-sales-evaluation-P19-06
+      - BE-sales-evaluation-P19-07
+      - BE-sales-evaluation-P19-08
+      - BE-sales-evaluation-P19-09
+      - BE-sales-evaluation-P19-10
+      - BE-sales-evaluation-P19-11
+      - BE-sales-evaluation-P19-12
+      - FE-sales-evaluation-P19-01
+      - FE-sales-evaluation-P19-02
+      - FE-sales-evaluation-P19-03
+      - FE-sales-evaluation-P19-04
+    approved_by: vunsen
+    approved_at: 2026-08-21T19:56:48.763Z
+    note: '_docs/module/sales-evaluation/plan.md Phase 0: checkbox "[setup] รัน
+      `setup` agent เพื่อสร้างโครงโปรเจกต์: Next.js Ap" has no BE-/FE- id —
+      skipped, an id is the identity · _docs/module/sales-evaluation/plan.md
+      Phase 0: checkbox "[setup] เขียน `prisma/schema.prisma` ตาม Data Model ใน
+      `desi" has no BE-/FE- id — skipped, an id is the identity ·
+      _docs/module/sales-evaluation/plan.md Phase 0: checkbox "[setup] Seed
+      ข้อมูลเริ่มต้น: `EvaluationSetting` singleton (" has no BE-/FE- id —
+      skipped, an id is the identity · _docs/module/sales-evaluation/plan.md
+      Phase 1: checkbox "[backend] Endpoint `POST /auth/login` —
+      ตรวจอีเมล+รหัสผ่านด้" had no BE-/FE- id — synthesized
+      BE-sales-evaluation-P1-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[backend]
+      Middleware ตรวจ JWT (แนบ `req.user`) และ middlewar" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P1-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[backend]
+      Endpoint `POST /auth/change-password` — ผู้ใช้เปลี" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P1-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[backend]
+      Endpoint `GET /users` (MANAGER เท่านั้น) — รายชื่อ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P1-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[backend]
+      Endpoint `POST /users` (MANAGER เท่านั้น) — สร้างบ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P1-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[backend]
+      Endpoint `PATCH /users/:id` (MANAGER เท่านั้น) — แ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P1-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[backend]
+      Endpoint `POST /users/:id/reset-password` (MANAGER" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P1-07 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[backend] Zod
+      schemas สำหรับ body ของทุก endpoint ข้างต้น (l" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P1-08 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[frontend] หน้า
+      Login (`/login`) — ฟอร์มอีเมล/รหัสผ่าน, เก็บ" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P1-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[frontend]
+      Zustand store สำหรับ auth state (`useAuthStore`) " had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P1-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[frontend] Route
+      guard/wrapper (Next.js middleware หรือ layo" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P1-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[frontend]
+      หน้าบังคับเปลี่ยนรหัสผ่านครั้งแรก — แสดงเมื่อ `mu" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P1-04 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[frontend]
+      หน้าเปลี่ยนรหัสผ่านตัวเอง (ในหน้าตั้งค่าบัญชี)" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P1-05 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[frontend]
+      หน้าจัดการบัญชีผู้ใช้ (MANAGER เท่านั้น) — ตาราง " had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P1-06 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 1: checkbox "[frontend] หน้า
+      Dashboard เปล่า/placeholder เป็นหน้าแรกหลัง " had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P1-07 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend] เพิ่ม
+      dependency `exceljs` และ `multer`" had no BE-/FE- id — synthesized
+      BE-sales-evaluation-P2-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend]
+      Endpoint `POST /import` (MANAGER เท่านั้น) — รับไฟ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend] Service
+      สแกน sheet ทั้งหมดในไฟล์ — นำเข้าเฉพาะ she" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend] Service
+      หา header row ใน 10 แถวแรกของ sheet แรก (เ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend] Service
+      parse แต่ละแถว: แปลง Excel date serial → `" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend] Service
+      validate ตามกฎครบทุก code: `MISSING_REQUIR" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend] Service
+      สร้าง `rowKey` = `"{invoiceNo}|{productNam" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-07 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend] Service
+      auto-create `Hospital`/`Salesperson`/`Prod" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-08 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend] Service
+      upsert `SalesLine` ตาม `rowKey` ในทรานแซกช" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-09 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend] หลัง
+      import สำเร็จ: อัปเดต `ImportBatch` (`totalRo" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-10 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend]
+      Endpoint `GET /import-batches` — ประวัติการนำเข้าท" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-11 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend]
+      Endpoint `GET /sales-lines` — list พร้อม filter (s" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-12 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend]
+      Endpoint `GET /salespeople` และ `PATCH /salespeopl" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-13 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend]
+      Endpoint `GET /hospitals` และ `PATCH /hospitals/:i" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-14 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[backend] Zod
+      schemas สำหรับ query ของ `/sales-lines` filter" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P2-15 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[frontend]
+      หน้าอัปโหลดไฟล์ Excel (MANAGER เท่านั้น) — drag-d" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P2-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[frontend]
+      หน้ารายงานผลการนำเข้า — สรุปตัวเลข (insertedRows/" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P2-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[frontend]
+      หน้าประวัติการนำเข้า (`GET /import-batches`) — li" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P2-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[frontend]
+      หน้าตรวจดูข้อมูลการขาย (`GET /sales-lines`) — ตาร" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P2-04 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 2: checkbox "[frontend]
+      หน้าจัดการ master data — ผูกชื่อพนักงานขายกับบัญช" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P2-05 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 3: checkbox "[backend]
+      Endpoint `GET /targets` — ดึงเป้าทั้งทีมทั้งปี (qu" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P3-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 3: checkbox "[backend]
+      Endpoint `PUT /targets/:salespersonId/:year/:month" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P3-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 3: checkbox "[backend]
+      Endpoint `PUT /targets/:targetId/product-groups` (" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P3-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 3: checkbox "[backend]
+      Endpoint `POST /targets/copy` (MANAGER เท่านั้น) —" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P3-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 3: checkbox "[backend]
+      Endpoint `GET /targets/:targetId/revisions` — ประว" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P3-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 3: checkbox "[backend] Zod
+      schemas สำหรับ target upsert body, product-gro" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P3-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 3: checkbox "[frontend]
+      หน้าตั้งเป้าแบบตารางทั้งทีมทั้งปีในหน้าเดียว (MAN" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P3-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 3: checkbox "[frontend]
+      ปุ่ม/action "คัดลอกเป้าเดือนก่อน" ในหน้าตั้งเป้า" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P3-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 3: checkbox "[frontend]
+      หน้า/modal ตั้งเป้ากลุ่มสินค้าต่อคนต่อเดือน — เลื" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P3-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 3: checkbox "[frontend]
+      หน้าดูประวัติการแก้ไขเป้า — แสดง before/after, ใค" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P3-04 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend] Service
+      คำนวณ `REVENUE_VS_TARGET` ต่อคนต่องวด (เดื" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend] Service
+      คำนวณ `NEW_CUSTOMERS` — นับโรงพยาบาลที่ขาย" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend] Service
+      คำนวณ `PRODUCT_GROUP` — เฉพาะกลุ่มที่ตั้งเ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend] Service
+      คำนวณ `RETENTION` — เทียบโรงพยาบาลงวดก่อนห" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend] Service
+      คำนวณ `CONSISTENCY` — coefficient of varia" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend] Service
+      คำนวณ `dataCoverageMonths` (จำนวนคู่ year/" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend] Service
+      renormalize คะแนนรวม — เฉลี่ยน้ำหนักใหม่เฉ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-07 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend] Service
+      คำนวณ KPI ประกอบ (ไม่คิดคะแนน): ลูกค้า act" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-08 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend]
+      Endpoint `GET /kpi/:salespersonId` — คะแนนรวม+แยกร" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-09 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend]
+      Endpoint `GET /kpi/team` — คะแนนของทุกคนในทีมสำหรั" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-10 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend]
+      Endpoint `GET /kpi/:salespersonId/drill-down/:metr" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-11 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend]
+      Endpoint `GET /settings/scoring-weights` และ `PUT " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-12 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend]
+      Endpoint `GET /settings/evaluation` และ `PATCH /se" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-13 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[backend] Zod
+      schemas สำหรับ scoring-weight update body และ " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P4-14 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[frontend]
+      หน้าตั้งค่าน้ำหนักคะแนน (MANAGER เท่านั้น) — ปรับ" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P4-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[frontend]
+      หน้าตั้งค่าคงที่ของการประเมิน (MANAGER เท่านั้น) " had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P4-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[frontend]
+      Component แสดงคะแนนรวม + badge "คิดจาก X จาก 5 เก" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P4-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 4: checkbox "[frontend]
+      Component drill-down (modal/expandable) ที่พาไปดู" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P4-04 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 5: checkbox "[backend]
+      เพิ่มเติม endpoint `GET /kpi/:salespersonId/trend`" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P5-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 5: checkbox "[backend]
+      Endpoint `GET /leaderboard` — รับ query `criteria`" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P5-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 5: checkbox "[backend] Zod
+      schema สำหรับ query ของ `/leaderboard`" had no BE-/FE- id — synthesized
+      BE-sales-evaluation-P5-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 5: checkbox "[frontend] เพิ่ม
+      dependency `recharts`" had no BE-/FE- id — synthesized
+      FE-sales-evaluation-P5-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 5: checkbox "[frontend] หน้า
+      Dashboard ส่วนตัว — ยอดสะสมเดือน/ไตรมาส/ปีเท" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P5-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 5: checkbox "[frontend]
+      กราฟแนวโน้มยอดรายเดือนย้อนหลัง (`recharts`)" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P5-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 5: checkbox "[frontend]
+      กราฟสัดส่วนยอดตามกลุ่มสินค้า และตามโรงพยาบาล" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P5-04 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 5: checkbox "[frontend]
+      Component แสดง KPI แต่ละตัวเทียบเป้าและเทียบค่าเฉ" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P5-05 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 5: checkbox "[frontend]
+      ตัวสลับดูมุมมองของพนักงานขายคนอื่น (dropdown เลือ" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P5-06 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 5: checkbox "[frontend] หน้า
+      Leaderboard — ตาราง/การ์ดจัดอันดับ, ตัวสลับเ" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P5-07 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 5: checkbox "[frontend] ปรับ
+      responsive ทุกหน้า Dashboard/Leaderboard สำห" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P5-08 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[backend] Service
+      ประกอบ payload สรุป KPI สำหรับส่งให้ AI — " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P6-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[backend] Service
+      ปิดบังชื่อ (เมื่อ `EvaluationSetting.aiAno" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P6-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[backend] Service
+      เรียก Gemini API พร้อม timeout, บันทึก pay" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P6-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[backend] Service
+      fallback rule-based summary เมื่อเรียก Gem" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P6-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[backend]
+      Endpoint `POST /coaching-insights/:salespersonId/g" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P6-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[backend]
+      Endpoint `GET /coaching-insights/:salespersonId` —" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P6-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[backend] สวิตช์
+      `aiEnabled` — ถ้าปิด ให้ endpoint generate " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P6-07 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[backend] เก็บ
+      Gemini API key ใน `.env` (`GEMINI_API_KEY`), " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P6-08 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[backend] Zod
+      schema สำหรับ body ของ generate endpoint" had no BE-/FE- id — synthesized
+      BE-sales-evaluation-P6-09 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[frontend]
+      หน้า/section สรุปจุดแข็ง-จุดที่ควรพัฒนา ในหน้า Da" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P6-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[frontend] ปุ่ม
+      "สร้างใหม่" (regenerate) เรียก `POST /coachi" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P6-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[frontend] สถานะ
+      loading/error ของการสร้าง insight — แสดง fa" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P6-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[frontend]
+      Drill-down จากข้อสรุป AI ไปยังตัวเลข KPI ที่มา (r" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P6-04 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 6: checkbox "[frontend]
+      หน้าตั้งค่า — สวิตช์เปิด/ปิด AI ทั้งระบบ (MANAGER" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P6-05 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 7: checkbox "[backend]
+      Endpoint `GET /reports/individual/:salespersonId` " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P7-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 7: checkbox "[backend]
+      Endpoint `GET /reports/team-overview` — สรุปทั้งที" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P7-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 7: checkbox "[backend] เพิ่ม
+      dependency `exceljs` (ใช้ตัวเดียวกับ import)" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P7-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 7: checkbox "[backend]
+      Endpoint `GET /reports/individual/:salespersonId/e" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P7-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 7: checkbox "[backend]
+      Endpoint `GET /reports/team-overview/export` — สร้" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P7-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 7: checkbox "[frontend]
+      หน้ารายงานรายบุคคล — เป้า vs ผลจริง, KPI ทุกตัว, " had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P7-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 7: checkbox "[frontend]
+      หน้าภาพรวมทีมสำหรับผู้จัดการใช้ดูว่าใครควรได้รับก" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P7-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 7: checkbox "[frontend] ปุ่ม
+      Export Excel ในทั้งสองหน้า (รายบุคคล/ภาพรวมท" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P7-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend]
+      Migration: เพิ่ม `SalesLineCredit`, `SalesmanNameR" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend] สคริปต์
+      backfill: สร้าง `SalesLineCredit` 1 แถวต่อ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend] Shared
+      normalizer module: `thaiCore(s)`, `latinCor" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend] แก้
+      import service: parse ค่าดิบคอลัมน์ `Salesman`" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend] แก้
+      import service: เขียน `SalesLineCredit` ให้ทุก" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend] แก้
+      import service: resolve ชื่อโรงพยาบาลผ่าน `Hos" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend] Seed
+      script: สร้าง `HospitalNameReview` สถานะ `KEP" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-07 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend]
+      Endpoint `GET /hospital-name-reviews` (MANAGER) — " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-08 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend]
+      Endpoint `PATCH /hospital-name-reviews/:id` (MANAG" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-09 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend]
+      Endpoint `GET /salesman-name-rules` (MANAGER) — li" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-10 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend]
+      Endpoint `PATCH /salesman-name-rules/:id` (MANAGER" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-11 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend] สคริปต์
+      cleanup ครั้งเดียว (รันครั้งเดียว ย้อนกลับ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-12 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend] แก้
+      query/service ของ Phase 4–7 ทุกจุดที่เคยรวมยอด" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-13 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[backend] Zod
+      schemas สำหรับ body ของ `PATCH /hospital-name-" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P8-14 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[frontend]
+      หน้าคิวยืนยันชื่อโรงพยาบาลซ้ำ (MANAGER เท่านั้น) " had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P8-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[frontend]
+      หน้าคิวยืนยัน/แก้สัดส่วนดีลแชร์เครดิต (MANAGER เท" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P8-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 8: checkbox "[frontend] เพิ่ม
+      badge/แสดงผล `ImportIssue` รหัสใหม่ในหน้ารา" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P8-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend]
+      Migration: เพิ่ม `Region`, `ProvinceMapping`, `Pro" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend] Seed
+      script: `Region` 5 ภาค (เหนือ/อีสาน/กลาง/ใต้/" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend] Seed
+      script: `ProvinceAlias` จากค่าดิบ 69 ค่าที่พบ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend]
+      Endpoint `PATCH /provinces/:id` (MANAGER) — แก้ `r" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend] Service
+      นำเข้า `ขนาดเตียงรพ.xlsx` เข้า `HospitalRe" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend]
+      Endpoint `POST /registry-import` (MANAGER เท่านั้น" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend] Service
+      จับคู่ `Hospital` ↔ `HospitalRegistry` อัต" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-07 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend]
+      Endpoint `GET /hospital-registry-links` (MANAGER) " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-08 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend]
+      Endpoint `PATCH /hospital-registry-links/:hospital" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-09 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend] Service
+      เดาเจ้าของพื้นที่จากประวัติการขาย (ผู้ขายส" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-10 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend]
+      Endpoint `GET /territory-assignments` — list, filt" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-11 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend]
+      Endpoint `POST /territory-assignments/:id/confirm`" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-12 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend]
+      Endpoint `PUT /territory-assignments` (MANAGER) — " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-13 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend]
+      Endpoint `GET /hospitals/uncontactable` — คืน 2 รา" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-14 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[backend] Zod
+      schemas สำหรับ body ของ `POST /registry-import" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P9-15 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[frontend]
+      หน้าอัปโหลดไฟล์ทะเบียนโรงพยาบาล (MANAGER เท่านั้น" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P9-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[frontend]
+      หน้าคิวยืนยันการจับคู่โรงพยาบาลกับทะเบียน (MANAGE" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P9-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[frontend]
+      หน้าจัดการ จังหวัด → ภาค (MANAGER เท่านั้น) — ตาร" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P9-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[frontend]
+      หน้าพื้นที่รับผิดชอบ — ตารางต่อพนักงานขาย/โรงพยาบ" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P9-04 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 9: checkbox "[frontend]
+      หน้ารายการโรงพยาบาลที่ยังปิดการขายไม่ได้ — 2 ชุดแ" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P9-05 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Migration: เพิ่ม `TierWeight` + 6 คอลัมน์ใหม่ใน `E" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Service คำนวณ `potential(h) = metricValue(h, setti" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Service คำนวณ `potential(sp, region)` / `potential" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Service คำนวณ `regionCoverage(region)` / `personCo" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Service คำนวณ `penetrationIndex(sp, region)` ตามข้" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Service คำนวณ `historyBased(sp, region)` ตามข้อ 5." had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Service คำนวณ `R(region, period)` ตามข้อ 5.2 — โหม" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-07 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Service คำนวณ `potentialBased(sp,region)`, `w(sp,r" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-08 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Service คำนวณ `unmappedBase(sp)` สำหรับยอดที่มาจาก" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-09 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Service รวม `suggested(sp) = Σ suggested(sp,region" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-10 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Endpoint `GET /target-suggestions/:year/:month` (M" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-11 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Endpoint `POST /target-suggestions/reinstate-deal`" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-12 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Endpoint `GET /settings/tier-weights` และ `PATCH /" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-13 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend]
+      Endpoint `PATCH /hospital-registry/:id/potential-a" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-14 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend] ขยาย
+      `PATCH /settings/evaluation` (จาก Phase 4) ให" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-15 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend] Zod
+      schemas สำหรับ query ของ `/target-suggestions/" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-16 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[backend] เขียน
+      guard/ทดสอบยืนยันว่าไม่มี path ใดใน Module L" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P10-17 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[frontend]
+      หน้าตัวช่วยตั้งเป้า — ตาราง `historyBased`/`poten" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P10-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[frontend] ปุ่ม
+      "รับข้อเสนอ" — เขียน `suggested(sp)` ลง `Tar" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P10-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[frontend]
+      หน้าตั้งค่าน้ำหนักตามระดับโรงพยาบาล (`TierWeight`" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P10-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[frontend]
+      ช่องแก้ `potentialAdjustment` รายโรงพยาบาลในหน้าร" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P10-04 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[frontend]
+      ขยายหน้าตั้งค่าคงที่ของการประเมิน (จาก Phase 4) ใ" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P10-05 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 10: checkbox "[frontend]
+      ป้ายกำกับบังคับบนทุกหน้าที่โชว์ศักยภาพ/penetratio" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P10-06 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 11: checkbox "[backend]
+      Migration: ขยาย `Product` (`code` nullable unique," had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P11-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 11: checkbox "[backend] Seed
+      script: สร้าง `ProductAlias` 1 แถวต่อ `Produc" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P11-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 11: checkbox "[backend] แก้
+      import service: resolve ชื่อสินค้าผ่าน `Produc" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P11-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 11: checkbox "[backend]
+      Endpoint `GET /products` — list ทะเบียนสินค้า (cod" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P11-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 11: checkbox "[backend]
+      Endpoint `PATCH /products/:id` (MANAGER เท่านั้น) " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P11-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 11: checkbox "[backend] Zod
+      schema สำหรับ body ของ `PATCH /products/:id`" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P11-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 11: checkbox "[frontend]
+      หน้าทะเบียนสินค้า — ตาราง code (แสดง **"—"** พร้อ" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P11-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      Migration: เพิ่ม `Territory` (`name` unique, `code" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      **เพิ่ม 2026-08-19 (รอบที่ 3)** Migration: เพิ่ม `" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend] Seed
+      script: `Region` 5 แถว (เหนือ/อีสาน/กลาง/ใต้/" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      เพิ่มคอลัมน์ `Hospital.territoryId`/`territorySour" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      เพิ่มคอลัมน์ `Salesperson.excludedFromTerritoryTot" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend] เพิ่ม
+      back-relation `territoryAssignmentsMade` บน " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      **Target re-scope**: เพิ่ม enum `TargetScope` (`TE" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-07 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      **ตรวจและแก้ทุก query/validator ของ Phase 3 ที่สมม" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-08 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      **ตรวจและแก้ทุกจุดใน `kpi.service.ts` (Phase 4) ที" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-09 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend] เขียน
+      assertion/guard: ทุกแถว `Target` มี `territo" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-10 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      **เพิ่ม 2026-08-19 (รอบที่ 3)** เขียน validator: ป" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-11 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      สคริปต์ bootstrap เขตให้โรงพยาบาล 141 แห่งตาม Terr" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-12 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      Endpoint `POST /territories` และ `PATCH /territori" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-13 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      Endpoint `GET /territories` — list เขตทั้งหมดพร้อม" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-14 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      Endpoint `GET /territory-assignments` — list, filt" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-15 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      Endpoint `PUT /territory-assignments` (MANAGER เท่" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-16 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      Endpoint `PATCH /hospitals/:id/territory` (MANAGER" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-17 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      Endpoint `POST /hospitals/territory/bulk-by-provin" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-18 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      Endpoint `GET /hospitals/unassigned-territory` — l" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-19 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      Service คำนวณ `derivedTarget(sp, งวด)` สดตาม Terri" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-20 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      **เพิ่ม 2026-08-19 (รอบที่ 3)** Service คำนวณเป้า/" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-21 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      Endpoint `GET /targets/derived/:salespersonId/:yea" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-22 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      Endpoint `PUT /targets/:territoryId/:year/:month` " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-23 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      **เพิ่ม 2026-08-19 (รอบที่ 3)** Endpoint `POST /te" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-24 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend]
+      ตรวจว่า `PUT /targets/:targetId/product-groups` (P" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-25 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[backend] Zod
+      schemas: territory create/update body, `PUT /t" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P12-26 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[frontend]
+      หน้าจัดการเขต (MANAGER เท่านั้นแก้ได้) — list/สร้" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P12-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[frontend]
+      หน้าจัดการผู้ดูแลเขต — มอบ/ถอนผู้ดูแลรายเขต พร้อม" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P12-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[frontend]
+      หน้า/เครื่องมือย้ายโรงพยาบาลเข้าเขต — ย้ายรายแห่ง" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P12-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[frontend]
+      หน้าโรงพยาบาลที่ยังไม่ผูกเขต — แสดงจำนวน + ยอด `u" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P12-04 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[frontend]
+      หน้าตั้งเป้าระดับเขตแบบตาราง (คู่ขนานกับหน้าตั้งเ" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P12-05 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[frontend]
+      Component แสดงเป้ารายคนที่ derive — ป้ายที่มา "กร" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P12-06 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 12: checkbox "[frontend]
+      **เพิ่ม 2026-08-19 (รอบที่ 3)** หน้าจัดการกลุ่มเข" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P12-07 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend]
+      Service คำนวณ `revenue(T, งวด)` ตาม Territory KPI " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend]
+      Service คำนวณ `personalBucket` และ `unassignedBuck" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend]
+      Service คำนวณ KPI 5 ตัวที่ระดับเขต ตามข้อ 4 (`REVE" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend]
+      Service ป้ายกำกับเกณฑ์ตามข้อ 5: เกณฑ์ไม่มีเป้า → "" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend]
+      Endpoint `GET /territory-kpi/:territoryId` — คะแนน" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend]
+      Endpoint `GET /territory-kpi/team` — ทุกเขตของ per" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend]
+      Endpoint `GET /territory-kpi/:territoryId/drill-do" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-07 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend]
+      Endpoint `GET /reports/territory-overview` — ประกอ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-08 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend]
+      Endpoint `GET /reports/territory-overview/export` " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-09 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend]
+      **เพิ่ม 2026-08-19 (รอบที่ 3)** ประกาศ whitelist ค" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-10 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend]
+      **เพิ่ม 2026-08-19 (รอบที่ 3)** Serializer ของ `GE" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-11 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend]
+      **เพิ่ม 2026-08-19 (รอบที่ 3)** บล็อก `personalBuc" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-12 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend]
+      **เพิ่ม 2026-08-19 (รอบที่ 3)** เพิ่มบล็อกกลุ่มเขต" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-13 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[backend] Zod
+      schemas สำหรับ query ของ endpoint ข้างต้นทั้งห" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P13-14 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[frontend]
+      หน้ารายงาน KPI รายเขต — ตาราง 1 แถว/เขต, ผู้ดูแลท" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P13-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[frontend]
+      **เพิ่ม 2026-08-19 (รอบที่ 3)** แสดงผลตามระดับที่" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P13-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[frontend]
+      Drill-down จากแต่ละเขต — กลุ่มสินค้าที่ขายได้ + ร" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P13-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 13: checkbox "[frontend] ปุ่ม
+      Export Excel ในหน้ารายงาน KPI รายเขต" had no BE-/FE- id — synthesized
+      FE-sales-evaluation-P13-04 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 14: checkbox "[backend]
+      Service "โรงพยาบาลที่ขายได้แล้ว" ในเขตของพนักงานขา" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P14-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 14: checkbox "[backend]
+      Service "เคยขายได้ แต่ไม่มีในงวดที่เลือก" — reuse " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P14-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 14: checkbox "[backend]
+      Service โหมดสำรองสำหรับคนที่ไม่มีเขต (`excludedFro" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P14-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 14: checkbox "[backend]
+      Endpoint `GET /my-territory-view/:salespersonId` —" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P14-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 14: checkbox "[backend]
+      Endpoint `GET /my-territory-view/:salespersonId/ex" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P14-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 14: checkbox "[backend] Zod
+      schema สำหรับ query (period, productTypeId, cr" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P14-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 14: checkbox "[frontend]
+      หน้ามุมมองรายเซลล์ — แสดงชื่อพนักงานขาย + เขตที่ด" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P14-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 15: checkbox "[backend]
+      Service จัดอันดับสินค้ารายเขต ตาม Product Master &" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P15-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 15: checkbox "[backend]
+      Service ต่อท้ายรายการด้วยสินค้าที่ขายได้ 0 เรียงตา" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P15-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 15: checkbox "[backend]
+      Service บล็อก `personalBucket` แยกสำหรับสินค้าที่ข" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P15-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 15: checkbox "[backend]
+      Endpoint `GET /territory-product-ranking/:territor" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P15-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 15: checkbox "[backend]
+      Endpoint `GET /territory-product-ranking/:territor" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P15-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 15: checkbox "[backend] Zod
+      schema สำหรับ query (period, territoryId)" had no BE-/FE- id — synthesized
+      BE-sales-evaluation-P15-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 15: checkbox "[frontend]
+      หน้าอันดับสินค้ารายเขต — คอลัมน์บังคับ: รหัสสินค้" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P15-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 16: checkbox "[backend]
+      Service "โรงพยาบาลรัฐทั่วไป (`GOVERNMENT_GENERAL`)" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P16-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 16: checkbox "[backend]
+      Service จำกัดจำนวนด้วย 2 กลไกพร้อมกันเสมอ (Territo" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P16-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 16: checkbox "[backend]
+      Endpoint `GET /my-territory-view/:salespersonId/ne" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P16-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 16: checkbox "[backend]
+      Endpoint `GET /my-territory-view/:salespersonId/ne" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P16-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 16: checkbox "[backend] Zod
+      schema สำหรับ query (topN, provinceMappingId, " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P16-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 16: checkbox "[frontend]
+      ขยายหน้ามุมมองรายเซลล์ (จาก Phase 14) เพิ่ม secti" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P16-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[backend] เขียน
+      `resolveViewerScope(user)` เป็น**ฟังก์ชันเดี" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P17-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[backend] เขียน
+      `visibleSalespersonIds(scope)` ตาม Data Visi" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P17-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[backend]
+      ใส่การกรองใน endpoint รับ `salespersonId` เป็นพารา" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P17-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[backend]
+      ใส่การกรองใน endpoint ที่คืนรายการคน (`GET /kpi/te" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P17-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[backend]
+      จัดการกรณีบัญชี `SALESPERSON` ที่ยังไม่ผูก `Salesp" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P17-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[backend]
+      แก้สิทธิ์ `POST /coaching-insights/:salespersonId/" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P17-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[backend]
+      แก้สิทธิ์ `GET /coaching-insights/:salespersonId` " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P17-07 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[backend]
+      ใส่การกรองใน Export ทุกตัวของ Phase 4–7 (`GET /rep" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P17-08 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[backend]
+      Endpoint `GET /users` (Module B เดิม) — เพิ่มฟิลด์" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P17-09 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[frontend] เพิ่ม
+      banner เตือนในหน้าจัดการบัญชีผู้ใช้ (Phase " had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P17-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[frontend]
+      แสดงข้อความอธิบาย ("บัญชีนี้ยังไม่ได้ผูกกับพนักงา" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P17-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[frontend]
+      ตัวสลับดูมุมมองของพนักงานขายคนอื่น (Phase 5 เดิม)" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P17-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[frontend] ปุ่ม
+      "สร้างใหม่" (regenerate insight, Phase 6 เดิ" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P17-04 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 17: checkbox "[frontend]
+      อัปเดตหน้ารายงานภาพรวมทีม/รายบุคคล (Phase 7 เดิม)" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P17-05 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[backend]
+      Endpoint จัดอันดับชั้นหลัก (แทนที่ `GET /leaderboa" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P18-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[backend]
+      รองรับสลับเกณฑ์ 4 แบบ (คะแนนรวม/%ถึงเป้า/ยอดขาย/ลู" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P18-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[backend]
+      หน่วยที่คำนวณเกณฑ์ที่เลือกไม่ได้ (เช่นยังไม่ได้ตั้" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P18-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[backend]
+      เขตที่ไม่มีผู้ดูแล → จัดอันดับตามปกติ แสดง "ยังไม่" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P18-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[backend] บล็อก
+      `personalBucket`/`unassignedBucket` ท้ายตารา" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P18-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[backend]
+      Serializer ชั้นหลัก — ใช้ **whitelist ค่าคงที่ชุดเ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P18-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[backend]
+      Endpoint drill-down รายบุคคลภายในเขต (ชั้นที่ 2) —" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P18-07 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[backend]
+      มุมมองพนักงานขายทั่วไปแทน drill-down — คืนเฉพาะ `{" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P18-08 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[backend] Export
+      Excel ของ Leaderboard — ใช้กฎ whitelist เดี" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P18-09 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[backend] Zod
+      schema สำหรับ query ของ endpoint จัดอันดับชั้น" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P18-10 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[frontend]
+      สร้างหน้า Leaderboard ใหม่ทั้งหน้า (แทนที่หน้า Le" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P18-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[frontend]
+      แสดงกลุ่มเขต — เขตสมาชิกไม่ปรากฏเป็นแถวจัดอันดับข" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P18-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[frontend]
+      Modal/หน้า drill-down รายบุคคลภายในเขต — เวอร์ชัน" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P18-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[frontend] บล็อก
+      `personalBucket`/`unassignedBucket` ท้ายตาร" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P18-04 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[frontend] ปรับ
+      responsive ทุกหน้า Leaderboard ใหม่ (Tailwin" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P18-05 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 18: checkbox "[frontend]
+      ลบ/ปิดใช้งานลิงก์ไปหน้า Leaderboard เดิมของ Phase" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P18-06 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[backend]
+      Migration: เพิ่ม enum `ImportMode` (`APPEND`/`REPL" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P19-01 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[backend] แก้
+      `POST /import` (Phase 2 เดิม) ให้รับพารามิเตอร" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P19-02 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[backend]
+      Service `REPLACE_PERIOD`: ตรวจก่อนแตะข้อมูลว่าทุกแ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P19-03 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[backend]
+      Endpoint `POST /import/period-delete` (MANAGER เท่" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P19-04 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[backend] บังคับ
+      dry-run: `REPLACE_PERIOD`/`PERIOD_DELETE` ต" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P19-05 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[backend]
+      Response ของ dry-run ต้องมีอย่างน้อย: งวดที่จะถูกแ" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P19-06 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[backend]
+      กรณีไฟล์ไม่มีแถวของงวดที่เลือกเลย → ไม่ใช่ `ERROR`" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P19-07 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[backend] ปฏิเสธ
+      import ซ้อนกัน — ถ้ามี `ImportBatch` สถานะ " had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P19-08 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[backend] ตั้ง
+      `CoachingInsight.isStale = true` สำหรับทุกงวด" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P19-09 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[backend] เขียน
+      guard: ห้ามลบ `Hospital`/`Product`/`ProductT" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P19-10 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[backend]
+      สคริปต์กู้คืนครั้งเดียว (รันโดย `backend-engineer`" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P19-11 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[backend] Zod
+      schemas สำหรับ body ของ `POST /import` ที่มี `" had no BE-/FE- id —
+      synthesized BE-sales-evaluation-P19-12 from its [backend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[frontend]
+      เพิ่มตัวเลือกโหมดนำเข้าในหน้าอัปโหลด Excel เดิม (" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P19-01 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[frontend]
+      หน้า/modal ยืนยัน dry-run — แสดงงวดที่จะถูกแตะ, จ" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P19-02 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[frontend]
+      Action แยก "ลบข้อมูลตามงวด" (`PERIOD_DELETE`) ในห" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P19-03 from its [frontend] tag ·
+      _docs/module/sales-evaluation/plan.md Phase 19: checkbox "[frontend] แสดง
+      `removedRows` ในหน้าประวัติการนำเข้า/รายละเอ" had no BE-/FE- id —
+      synthesized FE-sales-evaluation-P19-04 from its [frontend] tag'
+validated_by: vunsen
+validated_at: 2026-08-21T19:59:36.497Z
+created_at: 2026-08-21T19:46:54.720Z
+updated_at: 2026-08-21T19:59:36.497Z

@@ -1,0 +1,57 @@
+schema_version: 1
+id: DB-ProductAlias
+kind: db-schema
+title: "Database model: ProductAlias"
+version: 3
+status: approved
+owner: system-analyst
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:54:59.302Z
+updated_at: 2026-08-21T19:55:45.194Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/design.md#L827-L840
+    captured_at: 2026-08-21T19:54:59.302Z
+    digest: sha256:7261a1619afb2c321fdc344ffb9700c065a3d2cf75369f005d9e6f8173500b6d
+    source_id: SRC-_docs-module-sales-evaluation-design.md
+    note: legacy import (T85)
+relations: []
+payload:
+  model: ProductAlias
+  fields:
+    - name: id
+      type: String
+      optional: false
+    - name: normalizedKey
+      type: String
+      optional: false
+    - name: sampleRaw
+      type: String
+      optional: false
+    - name: productId
+      type: String
+      optional: false
+    - name: product
+      type: Product
+      optional: false
+    - name: source
+      type: NameDecisionSource
+      optional: false
+    - name: decidedById
+      type: String?
+      optional: true
+    - name: decidedBy
+      type: User?
+      optional: true
+    - name: decidedAt
+      type: DateTime?
+      optional: true
+    - name: createdAt
+      type: DateTime
+      optional: false
+  relations:
+    - Product
+    - User
+body: Migrated from _docs/module/sales-evaluation/design.md's Data Model, which CLAUDE.md makes the contract `backend-engineer` implements verbatim.

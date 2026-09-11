@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P12-02
+kind: task
+title: "**เพิ่ม 2026-08-19 (รอบที่ 3)** Migration: เพิ่ม `TerritoryGroup` (`name` unique, `isActive`, `note`), `TerritoryGroupMember` (`groupId`, `territoryId` **`@unique`** — 1 เขตอยู่ได้ไม่เกิน 1 กลุ่ม, `@@…"
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L215
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:2d7871a4d282ed4d57e61717698d8a067ec3eea193d9e1f8daf4ef41e00f697d
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 12
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [backend] **เพิ่ม 2026-08-19 (รอบที่ 3)** Migration: เพิ่ม `TerritoryGroup` (`name` unique, `isActive`, `note`), `TerritoryGroupMember` (`groupId`, `territoryId` **`@unique`** — 1 เขตอยู่ได้ไม่เกิน 1 กลุ่ม, `@@unique([groupId, territoryId])`), เพิ่มค่า `TERRITORY_GROUP` ใน enum `TargetScope`, เพิ่มคอลัมน์ `Target.territoryGroupId` (nullable) + relation ไป `TerritoryGroup` + `@@unique([territoryGroupId, year, month])` ลง `schema.prisma` ตาม Data Model ส่วนขยายรอบที่ 3 ทุกตัวอักษร — มีไว้เก็บเป้าคู่เขต 14M (กท1+ภาคตะวันตก)/13M (กท2+ภาคกลาง) เท่านั้น (การตัดสินใจแถวที่ 26 กลับคำเดิม)"

@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P14-01
+kind: task
+title: Service "โรงพยาบาลที่ขายได้แล้ว" ในเขตของพนักงานขายคนหนึ่ง — นับแบบเขต (ทุกโรงพยาบาลในเขตที่มียอดในงวดที่เลือก ไม่ใช่เฉพาะที่เขามีเครดิต) ตามหลัก "KPI เป็นก้อนเดียวที่ระดับเขต" + toggle "เฉพาะที่ฉันมี…
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L273
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:94369e323a7b813b2ced569009cc1156103d53da94af6780af506c89db85f9d7
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 14
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: '- [ ] [backend] Service "โรงพยาบาลที่ขายได้แล้ว" ในเขตของพนักงานขายคนหนึ่ง — นับแบบเขต (ทุกโรงพยาบาลในเขตที่มียอดในงวดที่เลือก ไม่ใช่เฉพาะที่เขามีเครดิต) ตามหลัก "KPI เป็นก้อนเดียวที่ระดับเขต" + toggle "เฉพาะที่ฉันมีเครดิต" (กรองผ่าน `SalesLineCredit` ของคนนั้นเอง)'

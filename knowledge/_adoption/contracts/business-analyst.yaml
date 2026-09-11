@@ -1,0 +1,72 @@
+# Converted from a legacy .claude/agents/business-analyst.md by adoption (T82).
+#
+# STAGED, NOT INSTALLED. Nothing reads this file. Installing it means copying it
+# to contracts/business-analyst.yaml deliberately, after reading it — and note that
+# --check-contracts compares contracts/ against the orchestrator's registry, so a
+# difference below is a difference that check will report once installed.
+#
+# No behavioural difference found against this framework's role of the same name.
+agent:
+  name: business-analyst
+  role: business-analyst
+  description: Use this agent when the user wants to start a new project/feature
+    and hasn't defined the business requirements yet, OR wants a change request
+    on an already-delivered module — e.g. "อยากได้ระบบ...",
+    "ทำโปรเจกต์...ให้หน่อย", "อยากได้ฟีเจอร์...", "module attendance เดิมมี...
+    อยากเพิ่ม...". This agent interviews the user like a business analyst
+    (business logic, scope, users, priorities) and produces/amends a
+    `requirement.md` file. It never writes code or picks a tech stack — that's
+    for the `frontend-engineer`/`backend-engineer` agents, once requirements
+    exist.
+input:
+  required: []
+  optional:
+    - qa-report
+    - design
+output:
+  required:
+    - requirements
+constraints:
+  - no_git
+  - stay_inside_repo
+  - no_next_agent_invocation
+  - amend_not_regenerate
+  - dates_from_user
+  - unsourced_facts_marked_assumption
+  - human_confirmation_required
+permissions:
+  capabilities:
+    - read
+    - write_docs
+  read:
+    - .claude/shared/**
+    - policies/**
+    - CLAUDE.md
+    - _docs/module/*/design.md
+    - _docs/module/*/requirement.md
+    - _docs/module/*/review.md
+    - _docs/status-archive.md
+    - _docs/status.md
+  write:
+    - _docs/module/*/requirement.md
+    - _docs/status.md
+    - _docs/status-archive.md
+  deny:
+    - _docs/module/*/design.md
+    - _docs/module/*/plan.md
+    - _docs/module/*/review.md
+tools:
+  - AskUserQuestion
+  - Write
+  - Edit
+  - Read
+  - Glob
+  - Grep
+states:
+  - REQUIREMENT
+capability:
+  languages: []
+  frameworks: []
+  database: []
+  capabilities:
+    - requirements-interview

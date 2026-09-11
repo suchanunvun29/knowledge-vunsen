@@ -1,0 +1,47 @@
+schema_version: 1
+id: DB-ProvinceAlias
+kind: db-schema
+title: "Database model: ProvinceAlias"
+version: 3
+status: approved
+owner: system-analyst
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:54:59.302Z
+updated_at: 2026-08-21T19:55:45.194Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/design.md#L558-L566
+    captured_at: 2026-08-21T19:54:59.302Z
+    digest: sha256:897ab236b7c9113b332cc343451e9698f228104b6c19a763c0f188b6177afd92
+    source_id: SRC-_docs-module-sales-evaluation-design.md
+    note: legacy import (T85)
+relations: []
+payload:
+  model: ProvinceAlias
+  fields:
+    - name: id
+      type: String
+      optional: false
+    - name: normalizedAlias
+      type: String
+      optional: false
+    - name: sampleRaw
+      type: String
+      optional: false
+    - name: provinceMappingId
+      type: String
+      optional: false
+    - name: provinceMapping
+      type: ProvinceMapping
+      optional: false
+    - name: isDistrictLevel
+      type: Boolean
+      optional: false
+    - name: createdAt
+      type: DateTime
+      optional: false
+  relations:
+    - ProvinceMapping
+body: Migrated from _docs/module/sales-evaluation/design.md's Data Model, which CLAUDE.md makes the contract `backend-engineer` implements verbatim.

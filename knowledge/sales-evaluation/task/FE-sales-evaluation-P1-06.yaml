@@ -1,0 +1,30 @@
+schema_version: 1
+id: FE-sales-evaluation-P1-06
+kind: task
+title: หน้าจัดการบัญชีผู้ใช้ (MANAGER เท่านั้น) — ตาราง list, ฟอร์มสร้างบัญชีใหม่, ปิดใช้งาน/เปิดใช้งาน, ปุ่มรีเซ็ตรหัสผ่าน, ผูกกับ `Salesperson`
+version: 3
+status: approved
+owner: frontend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L36
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:407919a434b489e62c5660c53d49c7836756654c397132fab4826b757de5900e
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: frontend-engineer
+  phase: 1
+  tag: frontend
+  plan_status: verified
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [x] [frontend] หน้าจัดการบัญชีผู้ใช้ (MANAGER เท่านั้น) — ตาราง list, ฟอร์มสร้างบัญชีใหม่, ปิดใช้งาน/เปิดใช้งาน, ปุ่มรีเซ็ตรหัสผ่าน, ผูกกับ `Salesperson`"

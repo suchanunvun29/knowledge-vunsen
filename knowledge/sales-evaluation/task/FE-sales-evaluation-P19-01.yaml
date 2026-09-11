@@ -1,0 +1,30 @@
+schema_version: 1
+id: FE-sales-evaluation-P19-01
+kind: task
+title: เพิ่มตัวเลือกโหมดนำเข้าในหน้าอัปโหลด Excel เดิม (Phase 2) — `APPEND` (ค่าเริ่มต้น) / `REPLACE_PERIOD` / บังคับให้เลือกงวดที่จะแทนที่เมื่อเลือก `REPLACE_PERIOD`
+version: 3
+status: approved
+owner: frontend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L358
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:16c5a5f0a0ad3fc7ba378417811a6c32834fdb4bd17f1d7a496e198943da2509
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: frontend-engineer
+  phase: 19
+  tag: frontend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [frontend] เพิ่มตัวเลือกโหมดนำเข้าในหน้าอัปโหลด Excel เดิม (Phase 2) — `APPEND` (ค่าเริ่มต้น) / `REPLACE_PERIOD` / บังคับให้เลือกงวดที่จะแทนที่เมื่อเลือก `REPLACE_PERIOD`"

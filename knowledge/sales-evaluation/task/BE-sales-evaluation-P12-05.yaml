@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P12-05
+kind: task
+title: เพิ่มคอลัมน์ `Salesperson.excludedFromTerritoryTotals` (default false) / `employmentEndedAt` (nullable) + back-relation `territoryAssignments` — ตั้ง `excludedFromTerritoryTotals = true` ให้ Mr.Sathit…
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L218
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:cdaca741bf0bc6f35c5d761b006d34f957cb7500579ee302f6ec1b5ffa878ebd
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 12
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [backend] เพิ่มคอลัมน์ `Salesperson.excludedFromTerritoryTotals` (default false) / `employmentEndedAt` (nullable) + back-relation `territoryAssignments` — ตั้ง `excludedFromTerritoryTotals = true` ให้ Mr.Sathit เพียงคนเดียวผ่านข้อมูล ห้าม hardcode logic ตามชื่อในโค้ด"

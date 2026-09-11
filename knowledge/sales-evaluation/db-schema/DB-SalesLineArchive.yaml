@@ -1,0 +1,59 @@
+schema_version: 1
+id: DB-SalesLineArchive
+kind: db-schema
+title: "Database model: SalesLineArchive"
+version: 3
+status: approved
+owner: system-analyst
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:54:59.302Z
+updated_at: 2026-08-21T19:55:45.194Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/design.md#L992-L1007
+    captured_at: 2026-08-21T19:54:59.302Z
+    digest: sha256:f89dac5a9347b5a07ae7d824d84c140e75c1b044ebed1c5965974e309d198f0f
+    source_id: SRC-_docs-module-sales-evaluation-design.md
+    note: legacy import (T85)
+relations: []
+payload:
+  model: SalesLineArchive
+  fields:
+    - name: id
+      type: String
+      optional: false
+    - name: salesLineId
+      type: String
+      optional: false
+    - name: rowKey
+      type: String
+      optional: false
+    - name: year
+      type: Int
+      optional: false
+    - name: month
+      type: Int
+      optional: false
+    - name: total
+      type: Decimal
+      optional: false
+    - name: reason
+      type: ArchiveReason
+      optional: false
+    - name: removedByBatchId
+      type: String
+      optional: false
+    - name: removedByBatch
+      type: ImportBatch
+      optional: false
+    - name: removedAt
+      type: DateTime
+      optional: false
+    - name: payload
+      type: Json
+      optional: false
+  relations:
+    - ImportBatch
+body: Migrated from _docs/module/sales-evaluation/design.md's Data Model, which CLAUDE.md makes the contract `backend-engineer` implements verbatim.

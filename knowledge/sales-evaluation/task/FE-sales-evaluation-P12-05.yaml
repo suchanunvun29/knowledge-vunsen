@@ -1,0 +1,30 @@
+schema_version: 1
+id: FE-sales-evaluation-P12-05
+kind: task
+title: หน้าตั้งเป้าระดับเขตแบบตาราง (คู่ขนานกับหน้าตั้งเป้ารายคนเดิมของ Phase 3, MANAGER เท่านั้นแก้ได้) — แถวต่อเขต คอลัมน์ต่อเดือน, inline edit revenueTarget/newCustomerTarget, **กรอกเป้าจริงปี 2026** (2 เ…
+version: 3
+status: approved
+owner: frontend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L244
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:2d9139da611049a3d9d74d263e02e672d253f4e90b8b7efbcbd96ed61f1a330e
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: frontend-engineer
+  phase: 12
+  tag: frontend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [frontend] หน้าตั้งเป้าระดับเขตแบบตาราง (คู่ขนานกับหน้าตั้งเป้ารายคนเดิมของ Phase 3, MANAGER เท่านั้นแก้ได้) — แถวต่อเขต คอลัมน์ต่อเดือน, inline edit revenueTarget/newCustomerTarget, **กรอกเป้าจริงปี 2026** (2 เขตของ Tasanee/Tanyapat ที่ยังไม่แตกตัวเลข 14M/13M จะยังกรอกไม่ได้จนกว่าจะมีตัวเลข — ดู Unresolved Open Questions)"

@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P4-07
+kind: task
+title: Service renormalize คะแนนรวม — เฉลี่ยน้ำหนักใหม่เฉพาะ metric ที่คำนวณได้, คืนจำนวน "X จาก 5 เกณฑ์" พร้อมเหตุผลของเกณฑ์ที่ถูกยกเว้น, ถ้าไม่มี metric ใดคำนวณได้เลยคืนสถานะ "ไม่มีคะแนนรวม" (ห้ามคืน 0)
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L80
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:095791266231e376ed3dcecabfa11d60e3166b063c31f9f836613d80ebc606db
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 4
+  tag: backend
+  plan_status: verified
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: '- [x] [backend] Service renormalize คะแนนรวม — เฉลี่ยน้ำหนักใหม่เฉพาะ metric ที่คำนวณได้, คืนจำนวน "X จาก 5 เกณฑ์" พร้อมเหตุผลของเกณฑ์ที่ถูกยกเว้น, ถ้าไม่มี metric ใดคำนวณได้เลยคืนสถานะ "ไม่มีคะแนนรวม" (ห้ามคืน 0)'

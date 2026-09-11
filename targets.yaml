@@ -1,0 +1,6 @@
+schema_version: 1
+targets:
+  - target_id: lung-lek
+    name: lung-lek
+    remote_url: https://github.com/suchanunvun29/lung-lek.git
+    status: active

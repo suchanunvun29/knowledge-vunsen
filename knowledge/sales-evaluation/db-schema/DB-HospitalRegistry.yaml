@@ -1,0 +1,90 @@
+schema_version: 1
+id: DB-HospitalRegistry
+kind: db-schema
+title: "Database model: HospitalRegistry"
+version: 3
+status: approved
+owner: system-analyst
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:54:59.302Z
+updated_at: 2026-08-21T19:55:45.194Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/design.md#L577-L603
+    captured_at: 2026-08-21T19:54:59.302Z
+    digest: sha256:0bcb1c7e8ec0a21909003348de28c0e1af23b3c43159028994ef2783c09619ab
+    source_id: SRC-_docs-module-sales-evaluation-design.md
+    note: legacy import (T85)
+relations: []
+payload:
+  model: HospitalRegistry
+  fields:
+    - name: id
+      type: String
+      optional: false
+    - name: sourceCode
+      type: String?
+      optional: true
+    - name: nameInFile
+      type: String
+      optional: false
+    - name: displayName
+      type: String
+      optional: false
+    - name: provinceMappingId
+      type: String?
+      optional: true
+    - name: provinceMapping
+      type: ProvinceMapping?
+      optional: true
+    - name: provinceRaw
+      type: String
+      optional: false
+    - name: regionId
+      type: String?
+      optional: true
+    - name: region
+      type: Region?
+      optional: true
+    - name: healthZone
+      type: String?
+      optional: true
+    - name: tier
+      type: String?
+      optional: true
+    - name: category
+      type: HospitalCategory
+      optional: false
+    - name: potentialAdjustment
+      type: Decimal
+      optional: false
+    - name: isActive
+      type: Boolean
+      optional: false
+    - name: sourceFile
+      type: String?
+      optional: true
+    - name: createdAt
+      type: DateTime
+      optional: false
+    - name: updatedAt
+      type: DateTime
+      optional: false
+    - name: metrics
+      type: HospitalPotentialMetric[]
+      optional: false
+    - name: links
+      type: HospitalRegistryLink[]
+      optional: false
+    - name: assignments
+      type: TerritoryAssignment[]
+      optional: false
+  relations:
+    - HospitalPotentialMetric
+    - HospitalRegistryLink
+    - ProvinceMapping
+    - Region
+    - TerritoryAssignment
+body: Migrated from _docs/module/sales-evaluation/design.md's Data Model, which CLAUDE.md makes the contract `backend-engineer` implements verbatim.

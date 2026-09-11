@@ -1,0 +1,30 @@
+schema_version: 1
+id: FE-sales-evaluation-P10-01
+kind: task
+title: หน้าตัวช่วยตั้งเป้า — ตาราง `historyBased`/`potentialBased`/`suggested` เรียงคู่กันพร้อมคอลัมน์ส่วนต่าง, badge coverage (ภาค+คน), ป้ายโหมด (`SUGGEST`/`REBALANCE`) พร้อมค่า `R`, รายการดีลที่ถูกตัดพร้อม…
+version: 3
+status: approved
+owner: frontend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L191
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:1cd8f6b702c3de1009b1cc30af2e5962e45312a64ef38c70ccb511d3d21a661f
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: frontend-engineer
+  phase: 10
+  tag: frontend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [frontend] หน้าตัวช่วยตั้งเป้า — ตาราง `historyBased`/`potentialBased`/`suggested` เรียงคู่กันพร้อมคอลัมน์ส่วนต่าง, badge coverage (ภาค+คน), ป้ายโหมด (`SUGGEST`/`REBALANCE`) พร้อมค่า `R`, รายการดีลที่ถูกตัดพร้อมปุ่มเอากลับ, ก้อน `unmappedBase`, ค่า `Σ suggested − R`"

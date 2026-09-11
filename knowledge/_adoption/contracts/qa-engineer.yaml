@@ -1,0 +1,93 @@
+# Converted from a legacy .claude/agents/qa-engineer.md by adoption (T82).
+#
+# STAGED, NOT INSTALLED. Nothing reads this file. Installing it means copying it
+# to contracts/qa-engineer.yaml deliberately, after reading it — and note that
+# --check-contracts compares contracts/ against the orchestrator's registry, so a
+# difference below is a difference that check will report once installed.
+#
+# No behavioural difference found against this framework's role of the same name.
+agent:
+  name: qa-engineer
+  role: qa-engineer
+  description: Use this agent only when the user explicitly asks for verification
+    after `frontend-engineer`/`backend-engineer` have implemented tasks from
+    `plan.md` — to check the work actually satisfies
+    `requirement.md`/`design.md`, run whatever checks exist (types/lint/build),
+    and do a final review with the user before accepting it. Trigger only on
+    explicit requests like "ตรวจงานหน่อย", "verify ให้หน่อย", "เช็คว่าทำครบไหม".
+    Do NOT auto-invoke just because an engineer agent finished a phase — wait
+    for the user to ask.
+input:
+  required:
+    - requirements
+    - design
+    - plan
+  optional:
+    - backend-code
+    - frontend-code
+output:
+  required:
+    - qa-report
+constraints:
+  - no_git
+  - stay_inside_repo
+  - no_next_agent_invocation
+  - amend_not_regenerate
+  - dates_from_user
+  - evidence_required
+  - must_state_verify_mode
+  - escalate_after_second_failure
+  - cannot_close_security_finding
+permissions:
+  capabilities:
+    - read
+    - test
+    - write_docs
+  read:
+    - .claude/agents/backend-engineer.md
+    - .claude/agents/frontend-engineer.md
+    - .claude/scripts/**
+    - .claude/shared/**
+    - policies/**
+    - CLAUDE.md
+    - _docs/module/**
+    - _docs/status-archive.md
+    - _docs/status.md
+    - app/**
+    - components/**
+    - package.json
+    - prisma/**
+    - server/**
+    - src/**
+  write:
+    - _docs/module/*/review.md
+    - _docs/module/*/review/**
+    - _docs/module/*/plan.md
+    - _docs/status.md
+    - _docs/status-archive.md
+  deny:
+    - _docs/module/*/design.md
+    - _docs/module/*/requirement.md
+    - _docs/module/*/security.md
+    - app/**
+    - server/**
+    - prisma/**
+tools:
+  - Read
+  - Glob
+  - Grep
+  - Bash
+  - AskUserQuestion
+  - Write
+  - Edit
+states:
+  - QA
+capability:
+  languages:
+    - typescript
+  frameworks: []
+  database:
+    - postgresql
+  capabilities:
+    - verification
+    - testing

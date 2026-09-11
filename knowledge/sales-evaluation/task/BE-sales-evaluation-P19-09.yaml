@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P19-09
+kind: task
+title: ตั้ง `CoachingInsight.isStale = true` สำหรับทุกงวดใน `P` (รวมไตรมาส/ปีที่ครอบคลุม) หลัง `REPLACE_PERIOD`/`PERIOD_DELETE` สำเร็จ — ใช้ logic เดิมของ Import Rules
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L354
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:16bd5f44c6cf554065d3a6a051062b2498120f20aa4e793bb720323221b9d975
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 19
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [backend] ตั้ง `CoachingInsight.isStale = true` สำหรับทุกงวดใน `P` (รวมไตรมาส/ปีที่ครอบคลุม) หลัง `REPLACE_PERIOD`/`PERIOD_DELETE` สำเร็จ — ใช้ logic เดิมของ Import Rules"

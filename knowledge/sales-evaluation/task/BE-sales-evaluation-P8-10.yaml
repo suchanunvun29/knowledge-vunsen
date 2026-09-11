@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P8-10
+kind: task
+title: Endpoint `GET /salesman-name-rules` (MANAGER) — list กฎทั้งหมดรวมกฎที่ auto-create รอยืนยัน
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L142
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:6f32423dea6237af1032f561111c43d13160e484fa71896084449b71e7656160
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 8
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [backend] Endpoint `GET /salesman-name-rules` (MANAGER) — list กฎทั้งหมดรวมกฎที่ auto-create รอยืนยัน"

@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P14-03
+kind: task
+title: Service โหมดสำรองสำหรับคนที่ไม่มีเขต (`excludedFromTerritoryTotals = true` หรือไม่มี `TerritoryAssignment` เลย) — ตกไปที่โหมด "กรองตาม `Product type` ทั่วประเทศ" อัตโนมัติ ห้ามคืนหน้าว่างเปล่า
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L275
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:b58b85262a5717830d285c07432ffe71b4841b8c7aebc1818672d6ed2565ef36
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 14
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: '- [ ] [backend] Service โหมดสำรองสำหรับคนที่ไม่มีเขต (`excludedFromTerritoryTotals = true` หรือไม่มี `TerritoryAssignment` เลย) — ตกไปที่โหมด "กรองตาม `Product type` ทั่วประเทศ" อัตโนมัติ ห้ามคืนหน้าว่างเปล่า'

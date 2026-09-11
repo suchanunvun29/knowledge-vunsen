@@ -1,0 +1,30 @@
+schema_version: 1
+id: FE-sales-evaluation-P16-01
+kind: task
+title: ขยายหน้ามุมมองรายเซลล์ (จาก Phase 14) เพิ่ม section "โรงพยาบาลรัฐที่ยังไม่เคยขายเลย" — ตัวเลือก Top N ตามเกณฑ์ศักยภาพ + ตัวกรองจังหวัดพร้อมกันเสมอ, filter `Product type` ร่วมกับ section เดิม, ปุ่ม Exp…
+version: 3
+status: approved
+owner: frontend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L300
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:eb696d4308f7e5e55e67db3eda9ff8befdfdddf14e5655a360929718a603be09
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: frontend-engineer
+  phase: 16
+  tag: frontend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: '- [ ] [frontend] ขยายหน้ามุมมองรายเซลล์ (จาก Phase 14) เพิ่ม section "โรงพยาบาลรัฐที่ยังไม่เคยขายเลย" — ตัวเลือก Top N ตามเกณฑ์ศักยภาพ + ตัวกรองจังหวัดพร้อมกันเสมอ, filter `Product type` ร่วมกับ section เดิม, ปุ่ม Export'

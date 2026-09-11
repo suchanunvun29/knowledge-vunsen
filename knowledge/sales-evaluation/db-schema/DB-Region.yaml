@@ -1,0 +1,45 @@
+schema_version: 1
+id: DB-Region
+kind: db-schema
+title: "Database model: Region"
+version: 3
+status: approved
+owner: system-analyst
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:54:59.302Z
+updated_at: 2026-08-21T19:55:45.194Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/design.md#L536-L544
+    captured_at: 2026-08-21T19:54:59.302Z
+    digest: sha256:953ba45083404f68e2f6a0296f6807f5185047cef252c1a86482239ec69ca595
+    source_id: SRC-_docs-module-sales-evaluation-design.md
+    note: legacy import (T85)
+relations: []
+payload:
+  model: Region
+  fields:
+    - name: id
+      type: String
+      optional: false
+    - name: name
+      type: String
+      optional: false
+    - name: sortOrder
+      type: Int
+      optional: false
+    - name: createdAt
+      type: DateTime
+      optional: false
+    - name: provinces
+      type: ProvinceMapping[]
+      optional: false
+    - name: registryHospitals
+      type: HospitalRegistry[]
+      optional: false
+  relations:
+    - HospitalRegistry
+    - ProvinceMapping
+body: Migrated from _docs/module/sales-evaluation/design.md's Data Model, which CLAUDE.md makes the contract `backend-engineer` implements verbatim.

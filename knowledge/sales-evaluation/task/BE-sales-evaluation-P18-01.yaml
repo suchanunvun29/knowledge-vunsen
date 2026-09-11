@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P18-01
+kind: task
+title: Endpoint จัดอันดับชั้นหลัก (แทนที่ `GET /leaderboard` เดิมของ Phase 5) — หน่วยจัดอันดับ = "หน่วยเป้า" ตาม Territory KPI Rules ข้อ 6 (เขตเดี่ยวที่มีเป้าของตัวเอง หรือ `TerritoryGroup`) — **ดึงตัวเลขจาก…
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L325
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:87fd8f4d9f81c5d7e08a4a79f1bc217eb62306b59fa092b65aa4e638f92e42a6
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 18
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: '- [ ] [backend] Endpoint จัดอันดับชั้นหลัก (แทนที่ `GET /leaderboard` เดิมของ Phase 5) — หน่วยจัดอันดับ = "หน่วยเป้า" ตาม Territory KPI Rules ข้อ 6 (เขตเดี่ยวที่มีเป้าของตัวเอง หรือ `TerritoryGroup`) — **ดึงตัวเลขจาก service ของ Phase 13/Module N เท่านั้น ห้ามคำนวณสูตรใหม่เอง**'

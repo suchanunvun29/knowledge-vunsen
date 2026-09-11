@@ -1,0 +1,72 @@
+schema_version: 1
+id: DB-Territory
+kind: db-schema
+title: "Database model: Territory"
+version: 3
+status: approved
+owner: system-analyst
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:54:59.302Z
+updated_at: 2026-08-21T19:55:45.194Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/design.md#L756-L772
+    captured_at: 2026-08-21T19:54:59.302Z
+    digest: sha256:bc5d8e2a37d578e8781526cfc55efde6eeb4b26cb54ebe0e5a299ba1a1831449
+    source_id: SRC-_docs-module-sales-evaluation-design.md
+    note: legacy import (T85)
+relations: []
+payload:
+  model: Territory
+  fields:
+    - name: id
+      type: String
+      optional: false
+    - name: name
+      type: String
+      optional: false
+    - name: code
+      type: String?
+      optional: true
+    - name: regionId
+      type: String?
+      optional: true
+    - name: region
+      type: Region?
+      optional: true
+    - name: sortOrder
+      type: Int
+      optional: false
+    - name: isActive
+      type: Boolean
+      optional: false
+    - name: note
+      type: String?
+      optional: true
+    - name: createdAt
+      type: DateTime
+      optional: false
+    - name: updatedAt
+      type: DateTime
+      optional: false
+    - name: assignments
+      type: TerritoryAssignment[]
+      optional: false
+    - name: hospitals
+      type: Hospital[]
+      optional: false
+    - name: registryHospitals
+      type: HospitalRegistry[]
+      optional: false
+    - name: targets
+      type: Target[]
+      optional: false
+  relations:
+    - Hospital
+    - HospitalRegistry
+    - Region
+    - Target
+    - TerritoryAssignment
+body: Migrated from _docs/module/sales-evaluation/design.md's Data Model, which CLAUDE.md makes the contract `backend-engineer` implements verbatim.

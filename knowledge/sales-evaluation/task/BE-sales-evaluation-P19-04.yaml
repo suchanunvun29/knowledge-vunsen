@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P19-04
+kind: task
+title: 'Endpoint `POST /import/period-delete` (MANAGER เท่านั้น) — โหมด `PERIOD_DELETE`: ลบ `SalesLine` ทั้งหมดของงวดที่เลือกโดยไม่มีไฟล์แนบ, บันทึกเป็นแถว `ImportBatch` (`mode = PERIOD_DELETE`, `fileName = "…'
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L349
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:13edb6864929a4084ffc8fba7bc0d089fd20c636cfec7e69b4339b1474b44de8
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 19
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: '- [ ] [backend] Endpoint `POST /import/period-delete` (MANAGER เท่านั้น) — โหมด `PERIOD_DELETE`: ลบ `SalesLine` ทั้งหมดของงวดที่เลือกโดยไม่มีไฟล์แนบ, บันทึกเป็นแถว `ImportBatch` (`mode = PERIOD_DELETE`, `fileName = "(ลบข้อมูลตามงวด)"`, `fileSizeBytes = 0`, `totalRows = 0`, `removedRows = N`, `reason = MANUAL_PERIOD_DELETE`) เพื่อให้โผล่ในหน้าประวัติการนำเข้าเดิม — **ไม่สร้างหน้าประวัติชุดที่สอง**'

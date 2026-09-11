@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P12-20
+kind: task
+title: "Service คำนวณ `derivedTarget(sp, งวด)` สดตาม Territory KPI Rules ข้อ 6 — **ห้ามเขียนลงตาราง `Target`**: รวมเป้าของทุกเขตที่ `sp` มี `TerritoryAssignment` ACTIVE หารด้วย `activeOwnerCount(T, งวด)` ของแ…"
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L233
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:8654bfac612f4ed476831a42a40787e2e2c6ebe8571c8e0efadc14a9f23df267
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 12
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: '- [ ] [backend] Service คำนวณ `derivedTarget(sp, งวด)` สดตาม Territory KPI Rules ข้อ 6 — **ห้ามเขียนลงตาราง `Target`**: รวมเป้าของทุกเขตที่ `sp` มี `TerritoryAssignment` ACTIVE หารด้วย `activeOwnerCount(T, งวด)` ของแต่ละเขตแล้วรวม (**`activeOwnerCount` นับทุกแถวไม่ว่า `isSupervisor` เป็น `true` หรือ `false` — เพิ่ม 2026-08-19**), ถ้ามีแถว `Target(scope=SALESPERSON)` ของคนนั้นในงวดนั้น → ใช้แทนทั้งก้อน, เขตที่ `activeOwnerCount = 0` → เป้าก้อนนั้นแสดงแยกเป็น "เป้าของเขตที่ยังไม่มีผู้ดูแล" ห้ามหารเข้าคนอื่น'

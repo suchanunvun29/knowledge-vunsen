@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P8-03
+kind: task
+title: "Shared normalizer module: `thaiCore(s)`, `latinCore(s)`, `personCore(s)` ตามนิยามในหัวข้อ Import Rules — ใช้จุดเดียว ห้ามเขียนซ้ำแยกไฟล์"
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L135
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:0cef8c8e459df1aa58a37a4598d9ffa4e876236aa67bfb440cc0db4bca971265
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 8
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [backend] Shared normalizer module: `thaiCore(s)`, `latinCore(s)`, `personCore(s)` ตามนิยามในหัวข้อ Import Rules — ใช้จุดเดียว ห้ามเขียนซ้ำแยกไฟล์"

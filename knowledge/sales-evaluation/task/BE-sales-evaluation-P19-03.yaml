@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P19-03
+kind: task
+title: "Service `REPLACE_PERIOD`: ตรวจก่อนแตะข้อมูลว่าทุกแถวที่ผ่าน validate อยู่ใน `P` (เซ็ตงวดที่เลือก) เท่านั้น — มีแถวนอก `P` → `ERROR PERIOD_OUT_OF_SCOPE` ยกเลิกทั้งไฟล์ `status = FAILED` → upsert ตาม `r…"
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L348
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:2a95298cdc67165aa8b559a553757e3c066a05c98081d6d1a4a8bdaa7b0b86fe
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 19
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [backend] Service `REPLACE_PERIOD`: ตรวจก่อนแตะข้อมูลว่าทุกแถวที่ผ่าน validate อยู่ใน `P` (เซ็ตงวดที่เลือก) เท่านั้น — มีแถวนอก `P` → `ERROR PERIOD_OUT_OF_SCOPE` ยกเลิกทั้งไฟล์ `status = FAILED` → upsert ตาม `rowKey` เหมือนเดิมทุกประการ → หา `SalesLine` ทุกแถวที่ `(year, month) ∈ P` และ `rowKey ∉ K` → คัดลอกลง `SalesLineArchive` (`reason = SUPERSEDED_BY_REIMPORT`) **พร้อม `SalesLineCredit` ทั้งหมดของแถวนั้นลงใน `payload`** → ลบออกจาก `SalesLine` จริง (cascade ลบ `SalesLineCredit`) → นับเป็น `removedRows` — ทั้งหมดในทรานแซกชันเดียว ล้มขั้นใดก็ rollback ทั้งชุด"

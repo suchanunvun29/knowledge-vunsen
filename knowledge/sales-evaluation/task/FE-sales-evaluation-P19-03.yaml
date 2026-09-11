@@ -1,0 +1,30 @@
+schema_version: 1
+id: FE-sales-evaluation-P19-03
+kind: task
+title: Action แยก "ลบข้อมูลตามงวด" (`PERIOD_DELETE`) ในหน้าเดียวกับหน้าอัปโหลด — เลือกงวด, ผ่าน dry-run+confirm flow เดียวกัน
+version: 3
+status: approved
+owner: frontend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L360
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:cbe432235707e00c9022d9c4982c183ccff3750d27112fce4cd987db2ca2b31f
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: frontend-engineer
+  phase: 19
+  tag: frontend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: '- [ ] [frontend] Action แยก "ลบข้อมูลตามงวด" (`PERIOD_DELETE`) ในหน้าเดียวกับหน้าอัปโหลด — เลือกงวด, ผ่าน dry-run+confirm flow เดียวกัน'

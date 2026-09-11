@@ -1,0 +1,30 @@
+schema_version: 1
+id: FE-sales-evaluation-P19-04
+kind: task
+title: แสดง `removedRows` ในหน้าประวัติการนำเข้า/รายละเอียด batch เดิม (Phase 2) — ไม่สร้างหน้าใหม่
+version: 3
+status: approved
+owner: frontend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L361
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:e0c01dd5c9ccda21cbb6579e9eedd5990c5560a2a10642fa7812bb410ccb9fa0
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: frontend-engineer
+  phase: 19
+  tag: frontend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [frontend] แสดง `removedRows` ในหน้าประวัติการนำเข้า/รายละเอียด batch เดิม (Phase 2) — ไม่สร้างหน้าใหม่"

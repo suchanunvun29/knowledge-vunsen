@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P9-01
+kind: task
+title: "Migration: เพิ่ม `Region`, `ProvinceMapping`, `ProvinceAlias`, `HospitalRegistry`, `HospitalPotentialMetric`, `HospitalRegistryLink`, `TerritoryAssignment` + enum `HospitalCategory`, `PotentialMetricK…"
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L152
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:8527bcc38331f93e8f67d24437e55daa472e782e6251a4392cac0c3cf555cbb0
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 9
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [backend] Migration: เพิ่ม `Region`, `ProvinceMapping`, `ProvinceAlias`, `HospitalRegistry`, `HospitalPotentialMetric`, `HospitalRegistryLink`, `TerritoryAssignment` + enum `HospitalCategory`, `PotentialMetricKey`, `RegistryLinkStatus`, `RegistryLinkMethod`, `TerritoryAssignmentSource`, `TerritoryAssignmentStatus` + `Hospital.provinceMappingId` + back-relations ลง `schema.prisma` ตาม Data Model ใน `design.md`"

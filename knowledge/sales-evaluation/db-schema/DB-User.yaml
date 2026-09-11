@@ -1,0 +1,79 @@
+schema_version: 1
+id: DB-User
+kind: db-schema
+title: "Database model: User"
+version: 3
+status: approved
+owner: system-analyst
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:54:59.302Z
+updated_at: 2026-08-21T19:55:45.194Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/design.md#L130-L148
+    captured_at: 2026-08-21T19:54:59.302Z
+    digest: sha256:44ff4fb73a00b706dcae97297596f5907d1a8f4048c83f0be6405b6d01b3c130
+    source_id: SRC-_docs-module-sales-evaluation-design.md
+    note: legacy import (T85)
+relations: []
+payload:
+  model: User
+  fields:
+    - name: id
+      type: String
+      optional: false
+    - name: email
+      type: String
+      optional: false
+    - name: passwordHash
+      type: String
+      optional: false
+    - name: displayName
+      type: String
+      optional: false
+    - name: role
+      type: UserRole
+      optional: false
+    - name: isActive
+      type: Boolean
+      optional: false
+    - name: mustChangePassword
+      type: Boolean
+      optional: false
+    - name: lastLoginAt
+      type: DateTime?
+      optional: true
+    - name: createdAt
+      type: DateTime
+      optional: false
+    - name: updatedAt
+      type: DateTime
+      optional: false
+    - name: salesperson
+      type: Salesperson?
+      optional: true
+    - name: importBatches
+      type: ImportBatch[]
+      optional: false
+    - name: targetRevisions
+      type: TargetRevision[]
+      optional: false
+    - name: weightRevisions
+      type: ScoringWeightRevision[]
+      optional: false
+    - name: settingUpdates
+      type: EvaluationSetting[]
+      optional: false
+    - name: generatedInsights
+      type: CoachingInsight[]
+      optional: false
+  relations:
+    - CoachingInsight
+    - EvaluationSetting
+    - ImportBatch
+    - Salesperson
+    - ScoringWeightRevision
+    - TargetRevision
+body: Migrated from _docs/module/sales-evaluation/design.md's Data Model, which CLAUDE.md makes the contract `backend-engineer` implements verbatim.

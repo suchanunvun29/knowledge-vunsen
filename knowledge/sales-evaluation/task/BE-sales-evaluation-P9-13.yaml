@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P9-13
+kind: task
+title: Endpoint `PUT /territory-assignments` (MANAGER) — สร้าง/ย้ายเจ้าของด้วยตัวเอง (`source = MANUAL`), ตั้ง `effectiveFrom`, ปิดรายการเดิมเป็น `SUPERSEDED` ด้วย `effectiveTo` (เก็บประวัติผู้ดูแลโดยไม่ต้อง…
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L164
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:6f6c3573fccc75045ee3ab90503165b5b2a2d54c7071d57e10cc5b49c9f95c8b
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 9
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [backend] Endpoint `PUT /territory-assignments` (MANAGER) — สร้าง/ย้ายเจ้าของด้วยตัวเอง (`source = MANUAL`), ตั้ง `effectiveFrom`, ปิดรายการเดิมเป็น `SUPERSEDED` ด้วย `effectiveTo` (เก็บประวัติผู้ดูแลโดยไม่ต้องมีตารางแยก ตาม requirement 10.3)"

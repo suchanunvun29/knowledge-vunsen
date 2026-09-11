@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P10-11
+kind: task
+title: Endpoint `GET /target-suggestions/:year/:month` (MANAGER) — คืน `historyBased`/`potentialBased`/`suggested` ต่อคนต่อภาค, coverage badge (ภาค+คน), โหมดที่ใช้อยู่พร้อมค่า `R`, รายการดีลที่ถูกตัดพร้อมเลข…
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L184
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:4252dc5e450db1cf05663a590af25936ddd84d6156148a97479b8f637faacad7
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 10
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [backend] Endpoint `GET /target-suggestions/:year/:month` (MANAGER) — คืน `historyBased`/`potentialBased`/`suggested` ต่อคนต่อภาค, coverage badge (ภาค+คน), โหมดที่ใช้อยู่พร้อมค่า `R`, รายการดีลที่ถูกตัดพร้อมเลขใบกำกับ, `unmappedBase`, `Σ suggested − R` ของภาค"

@@ -1,0 +1,103 @@
+# Converted from a legacy .claude/agents/setup.md by adoption (T82).
+#
+# STAGED, NOT INSTALLED. Nothing reads this file. Installing it means copying it
+# to contracts/setup.yaml deliberately, after reading it — and note that
+# --check-contracts compares contracts/ against the orchestrator's registry, so a
+# difference below is a difference that check will report once installed.
+#
+# No behavioural difference found against this framework's role of the same name.
+agent:
+  name: setup
+  role: setup
+  description: Use this agent once per project, before any feature work, to
+    scaffold the actual codebase — Next.js app, Express API, Prisma +
+    PostgreSQL, `.env`, npm scripts, `.gitignore`. Run it when the repo has no
+    `package.json`/`app/`/`prisma/` yet, or when
+    `frontend-engineer`/`backend-engineer`/`project-manager` says the project
+    isn't scaffolded. Trigger on requests like "ตั้งโปรเจกต์ให้หน่อย", "scaffold
+    โปรเจกต์", "init project", "ยังไม่มีโครงเลย".
+input:
+  required: []
+  optional:
+    - design
+output:
+  required:
+    - scaffolding
+    - schema.prisma
+    - backend-code
+constraints:
+  - no_git
+  - stay_inside_repo
+  - no_next_agent_invocation
+  - must_follow_design
+  - no_schema_guessing
+permissions:
+  capabilities:
+    - read
+    - write_code
+    - write_docs
+  read:
+    - .claude/agents/backend-engineer.md
+    - .claude/agents/frontend-engineer.md
+    - .claude/shared/**
+    - policies/**
+    - .env
+    - .env.example
+    - .gitignore
+    - CLAUDE.md
+    - _docs/module/*/design.md
+    - _docs/status-archive.md
+    - _docs/status.md
+    - app/**
+    - next.config.*
+    - package-lock.json
+    - package.json
+    - prisma/**
+    - public/**
+    - server/**
+    - src/**
+    - tailwind.config.*
+    - tsconfig.json
+  write:
+    - package.json
+    - package-lock.json
+    - tsconfig.json
+    - .env
+    - .env.example
+    - .gitignore
+    - next.config.*
+    - tailwind.config.*
+    - prisma/**
+    - app/**
+    - server/**
+    - src/**
+    - public/**
+  deny:
+    - _docs/**
+    - .claude/**
+    - contracts/**
+    - workflows/**
+    - stacks/**
+    - orchestrator/**
+tools:
+  - Bash
+  - Write
+  - Edit
+  - Read
+  - Glob
+  - Grep
+  - AskUserQuestion
+states:
+  - CREATED
+capability:
+  languages:
+    - typescript
+  frameworks:
+    - nextjs
+    - express
+    - prisma
+  database:
+    - postgresql
+  capabilities:
+    - scaffolding
+    - schema-design

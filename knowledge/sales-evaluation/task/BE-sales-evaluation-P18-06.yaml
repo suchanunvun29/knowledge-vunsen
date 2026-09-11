@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P18-06
+kind: task
+title: Serializer ชั้นหลัก — ใช้ **whitelist ค่าคงที่ชุดเดียวที่ Phase 13/Module N ประกาศไว้** (ห้ามประกาศซ้ำ) กรองฟิลด์ตามระดับ `TERRITORY_FULL`/`TERRITORY_RANK_ONLY` — อันดับคำนวณจากทุกหน่วยเป้าเสมอไม่ว่าผ…
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L330
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:7f352c7aeb74df489272a33328e56d906a53ad3d8837644a8fa77e2b47229fa6
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 18
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [backend] Serializer ชั้นหลัก — ใช้ **whitelist ค่าคงที่ชุดเดียวที่ Phase 13/Module N ประกาศไว้** (ห้ามประกาศซ้ำ) กรองฟิลด์ตามระดับ `TERRITORY_FULL`/`TERRITORY_RANK_ONLY` — อันดับคำนวณจากทุกหน่วยเป้าเสมอไม่ว่าผู้ดูจะเห็นตัวเลขได้แค่ไหน"

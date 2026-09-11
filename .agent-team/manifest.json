@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "framework_version": "1.0.0-rc.1",
+  "installed_at": "2026-08-24T16:01:57.277Z",
+  "updated_at": "2026-09-04T14:27:30.402Z",
+  "files": [
+    {
+      "path": ".claude/agents/business-analyst.md",
+      "sha256": "eb09e4d82b2b7343d78518f3e4b93add04ea76ffed6b131ba6cea6da87484044",
+      "size_bytes": 18614
+    },
+    {
+      "path": ".claude/agents/project-manager.md",
+      "sha256": "650a678c18ecb89960c96930ff05d7e9feb487871f004ae0baa7dcc297db88c7",
+      "size_bytes": 12516
+    },
+    {
+      "path": ".claude/agents/system-analyst.md",
+      "sha256": "e80d7c08027cc13b7212b54492959c7cf87e028077ebfafad5911430e4691016",
+      "size_bytes": 26279
+    },
+    {
+      "path": ".claude/agents/test-planner.md",
+      "sha256": "dafbff2cc5f643fcf17dd7b7d55c68da06e7c1782f0d863c360bd911f1c0a516",
+      "size_bytes": 7837
+    },
+    {
+      "path": ".claude/agents/uxui-designer.md",
+      "sha256": "8b69a02cddbd297bc8a81b7b4ea22899aaf8122ace227df0b06f551a5b948b36",
+      "size_bytes": 7326
+    },
+    {
+      "path": ".claude/hooks/block-doc-rewrite.js",
+      "sha256": "f190158424fbb6cfab6ce8e213363b8c4ab9d1d1fbc260932f60a033b7561c66",
+      "size_bytes": 4775
+    },
+    {
+      "path": ".claude/hooks/block-git.js",
+      "sha256": "733b5ae2f1dcaecf1881c08af9432d30992c56dfec2118fc9650c0388167cf7a",
+      "size_bytes": 11088
+    },
+    {
+      "path": ".claude/hooks/block-outside-repo.js",
+      "sha256": "d77f0fb396b3cdab2b54fe2d1d91c7f25791a0c9a9eed2fc43485aef555954b9",
+      "size_bytes": 6369
+    },
+    {
+      "path": ".claude/hooks/block-path-permissions.js",
+      "sha256": "a4bba5280e6f6db4d67b1df7a0ea47626958a73b9ae7aaeb14dac49cb64e5ba2",
+      "size_bytes": 12290
+    },
+    {
+      "path": ".claude/hooks/block-secret-leak.js",
+      "sha256": "167b0063952a878d231eb121c9a46fdd74fabe754ba39800c88cea8cd9c0a391",
+      "size_bytes": 7646
+    },
+    {
+      "path": ".claude/hooks/package.json",
+      "sha256": "ab4695da96fc853109396d3dbf22cb7a7c943072af60640fb6ed19e76766616c",
+      "size_bytes": 634
+    },
+    {
+      "path": ".claude/hooks/require-green-before-stop.js",
+      "sha256": "58102611b595d425a97578445619138920fb76d1c1c0bcdc7228468f55d47ab5",
+      "size_bytes": 10261
+    },
+    {
+      "path": ".claude/scripts/check-schema-contract.js",
+      "sha256": "9230f4aac5ec555ecd66f22084ae07f2e56cdacdaee5b6b93bd7d689c94ca91d",
+      "size_bytes": 7340
+    },
+    {
+      "path": ".claude/scripts/check-status-sync.js",
+      "sha256": "4d464bcab097626ca92445d4947e31b743fe1b9bfbb05137d7021b2b9896f794",
+      "size_bytes": 8609
+    },
+    {
+      "path": ".claude/scripts/generate-status.js",
+      "sha256": "ea55cbeef4f9d5f32a5862bc4e28ab76168bb793ebb2ddc61bb8a12823cc2286",
+      "size_bytes": 12553
+    },
+    {
+      "path": ".claude/scripts/package.json",
+      "sha256": "315a67b8e644ff2e50d002be25b67ccbb6fb863ec123cfef0a6cee655307b594",
+      "size_bytes": 307
+    },
+    {
+      "path": ".claude/scripts/static-analysis-gate.js",
+      "sha256": "a3f8dc6b2248b74a94333bec80a07c4b7314f74a4e5f8b7e24c1a5a857ac8d34",
+      "size_bytes": 11756
+    },
+    {
+      "path": ".claude/settings.json",
+      "sha256": "19e347f835a63e378b2e39ffdf219e33e255c5111635b82955d7152cd376e552",
+      "size_bytes": 2012
+    },
+    {
+      "path": ".claude/shared/conventions.md",
+      "sha256": "e7d7b2d4dd38032ca1c58f1aee4fa74c7252e64ba4a97864f2b7c058d12c5745",
+      "size_bytes": 1066
+    },
+    {
+      "path": ".claude/shared/multi-module-schema-scoping.md",
+      "sha256": "e1c14b5d9ea79fbb16acf14d128ff5544516dc2f5f7c88021ff14fd7947f4e01",
+      "size_bytes": 2370
+    },
+    {
+      "path": ".opencode/plugin/sta-guards.js",
+      "sha256": "72d347f770c426836601b7fa5014bc357301d5d948069fb3712946ef360d7094",
+      "size_bytes": 14272
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "64b781f8ce8b06199184adba205456350779c224384b43379e3130fc9b806d48",
+      "size_bytes": 41316
+    },
+    {
+      "path": "policies/README.md",
+      "sha256": "d3094d74418025a2cfb026a6d7e853d2930afe8331ee9e9ebb59720a3d78a46b",
+      "size_bytes": 2177
+    },
+    {
+      "path": "policies/agent-boundaries.md",
+      "sha256": "e8869e75fa2ae117b2b0ee459fa30f20cf8250e2f050382922a0311b33b67f57",
+      "size_bytes": 10422
+    },
+    {
+      "path": "policies/architecture.md",
+      "sha256": "1bfcf58da98fcfb5d6b7326a539c387c0973407e4996d5385c8c5f87779fe93e",
+      "size_bytes": 4062
+    },
+    {
+      "path": "policies/coding.md",
+      "sha256": "0366517a0e15a1e8928fe415890981c0a0aeed27ae6aab964cc098c51d4634c4",
+      "size_bytes": 3356
+    },
+    {
+      "path": "policies/documentation.md",
+      "sha256": "84a764fc2337aebfe623b5f4e710994072856eadc862e0529d23a764079334f4",
+      "size_bytes": 27723
+    },
+    {
+      "path": "policies/git.md",
+      "sha256": "6019cbc212225e4c23eb6afd9d85fe3c42f4b56d4901269935027b9bbdab2ca8",
+      "size_bytes": 959
+    },
+    {
+      "path": "policies/security.md",
+      "sha256": "9a785491ca4ed19b23d231caecd97eebd184141dd522f0f5c78e79a7b02f999c",
+      "size_bytes": 2627
+    },
+    {
+      "path": ".codex/agents/business-analyst.toml",
+      "sha256": "e4b8f3a891d1dc1400dfbe0fed2ec34d80ffa956bc8f7d3177fab5ebf8f77a2f",
+      "size_bytes": 18441
+    },
+    {
+      "path": ".codex/agents/project-manager.toml",
+      "sha256": "baea14c056cb4935ad022bacf61a8684bbdcf958ae2467f9b2f5f73f237016c8",
+      "size_bytes": 12390
+    },
+    {
+      "path": ".codex/agents/system-analyst.toml",
+      "sha256": "49e2e5f940746dbe462898cd03383e2cfcb79d6be15e1bc8aa66a159cd1418a8",
+      "size_bytes": 26098
+    },
+    {
+      "path": ".codex/agents/test-planner.toml",
+      "sha256": "0d7b762e8b86760861a16f2ff4ebc15b5423a25b11402d29eefd5a1196d3bde3",
+      "size_bytes": 7749
+    },
+    {
+      "path": ".codex/agents/uxui-designer.toml",
+      "sha256": "13882bca666a0a6c8fedc30bb3d31040d9bee64eef773facc58f27547b05a586",
+      "size_bytes": 7253
+    },
+    {
+      "path": ".opencode/agent/business-analyst.md",
+      "sha256": "f1637386b70e2f5a0e991571a3993b0f48b8d8be8dde3d823eac313dce3566a7",
+      "size_bytes": 18503
+    },
+    {
+      "path": ".opencode/agent/project-manager.md",
+      "sha256": "27712e89439492d1e0fcf0ea3aa59555e45f0fa7e417e433777e5b925b075ada",
+      "size_bytes": 12451
+    },
+    {
+      "path": ".opencode/agent/system-analyst.md",
+      "sha256": "ea838f2435feaf865999996fa168d6af9b0ea2ddfc75faf45fd4c656eb476d3a",
+      "size_bytes": 26163
+    },
+    {
+      "path": ".opencode/agent/test-planner.md",
+      "sha256": "0339e443f2c3ed5eb6b9818116c441a24e2715d74d3e5a9737d0c6baba22d3d1",
+      "size_bytes": 7813
+    },
+    {
+      "path": ".opencode/agent/uxui-designer.md",
+      "sha256": "b12b9c2bf316c8e624603a8f69817d195ac9a4354ae0c58419f0a26fd66dc5ec",
+      "size_bytes": 7317
+    }
+  ]
+}

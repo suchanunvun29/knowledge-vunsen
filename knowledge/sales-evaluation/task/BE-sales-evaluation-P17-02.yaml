@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P17-02
+kind: task
+title: เขียน `visibleSalespersonIds(scope)` ตาม Data Visibility Rules ข้อ 2 — MANAGER = ทุกคน, มิฉะนั้น = `{ selfSalespersonId } ∪` สมาชิกของทุกเขตที่ตัวเองเป็น supervisor (assignment มีผลอยู่ ณ วันนี้)
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L307
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:0f81c19414b59107fe91fcebdd08436d79fe39fc6b4ddacc5e306bebb668faf0
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 17
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [backend] เขียน `visibleSalespersonIds(scope)` ตาม Data Visibility Rules ข้อ 2 — MANAGER = ทุกคน, มิฉะนั้น = `{ selfSalespersonId } ∪` สมาชิกของทุกเขตที่ตัวเองเป็น supervisor (assignment มีผลอยู่ ณ วันนี้)"

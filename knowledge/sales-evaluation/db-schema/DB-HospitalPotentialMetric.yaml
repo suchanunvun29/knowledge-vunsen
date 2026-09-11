@@ -1,0 +1,53 @@
+schema_version: 1
+id: DB-HospitalPotentialMetric
+kind: db-schema
+title: "Database model: HospitalPotentialMetric"
+version: 3
+status: approved
+owner: system-analyst
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:54:59.302Z
+updated_at: 2026-08-21T19:55:45.194Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/design.md#L616-L628
+    captured_at: 2026-08-21T19:54:59.302Z
+    digest: sha256:1fca7c9a0950c75d7a638f30c0db34743f2a5a4a29b5749933044c3a4e07adb1
+    source_id: SRC-_docs-module-sales-evaluation-design.md
+    note: legacy import (T85)
+relations: []
+payload:
+  model: HospitalPotentialMetric
+  fields:
+    - name: id
+      type: String
+      optional: false
+    - name: hospitalRegistryId
+      type: String
+      optional: false
+    - name: hospitalRegistry
+      type: HospitalRegistry
+      optional: false
+    - name: metric
+      type: PotentialMetricKey
+      optional: false
+    - name: value
+      type: Decimal
+      optional: false
+    - name: periodYear
+      type: Int?
+      optional: true
+    - name: periodMonth
+      type: Int?
+      optional: true
+    - name: sourceFile
+      type: String?
+      optional: true
+    - name: createdAt
+      type: DateTime
+      optional: false
+  relations:
+    - HospitalRegistry
+body: Migrated from _docs/module/sales-evaluation/design.md's Data Model, which CLAUDE.md makes the contract `backend-engineer` implements verbatim.

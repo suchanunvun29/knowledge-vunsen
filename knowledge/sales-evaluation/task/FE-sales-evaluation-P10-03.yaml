@@ -1,0 +1,30 @@
+schema_version: 1
+id: FE-sales-evaluation-P10-03
+kind: task
+title: หน้าตั้งค่าน้ำหนักตามระดับโรงพยาบาล (`TierWeight`, MANAGER เท่านั้น)
+version: 3
+status: approved
+owner: frontend-engineer
+module: sales-evaluation
+repo: null
+sensitive: false
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L193
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:8c186eee7d8ff3b6a8c8d3c8d18df617b85db98eb3ab8cb8353e3e4bfcbd2335
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: frontend-engineer
+  phase: 10
+  tag: frontend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [frontend] หน้าตั้งค่าน้ำหนักตามระดับโรงพยาบาล (`TierWeight`, MANAGER เท่านั้น)"

@@ -1,0 +1,69 @@
+# Converted from a legacy .claude/agents/project-manager.md by adoption (T82).
+#
+# STAGED, NOT INSTALLED. Nothing reads this file. Installing it means copying it
+# to contracts/project-manager.yaml deliberately, after reading it — and note that
+# --check-contracts compares contracts/ against the orchestrator's registry, so a
+# difference below is a difference that check will report once installed.
+#
+# No behavioural difference found against this framework's role of the same name.
+agent:
+  name: project-manager
+  role: project-manager
+  description: Use this agent after `design.md` exists (from the `system-analyst`
+    agent) to turn the confirmed features/modules into a phased implementation
+    plan with concrete, ordered tasks tagged [frontend]/[backend], ready to hand
+    off. Trigger on requests like "วางแผนงานให้หน่อย", "แตกเป็น task ให้หน่อย",
+    or right after the `system-analyst` agent finishes.
+input:
+  required:
+    - design
+    - requirements
+  optional: []
+output:
+  required:
+    - plan
+constraints:
+  - no_git
+  - stay_inside_repo
+  - no_next_agent_invocation
+  - amend_not_regenerate
+  - dates_from_user
+  - flags_sensitive_phases
+permissions:
+  capabilities:
+    - read
+    - write_docs
+  read:
+    - .claude/agents/backend-engineer.md
+    - .claude/agents/frontend-engineer.md
+    - .claude/shared/**
+    - policies/**
+    - CLAUDE.md
+    - _docs/module/*/design.md
+    - _docs/module/*/plan.md
+    - _docs/module/*/requirement.md
+    - _docs/status-archive.md
+    - _docs/status.md
+  write:
+    - _docs/module/*/plan.md
+    - _docs/status.md
+    - _docs/status-archive.md
+  deny:
+    - _docs/module/*/design.md
+    - _docs/module/*/requirement.md
+    - _docs/module/*/review.md
+tools:
+  - Read
+  - Glob
+  - Grep
+  - AskUserQuestion
+  - Write
+  - Edit
+states:
+  - PLAN
+capability:
+  languages: []
+  frameworks: []
+  database: []
+  capabilities:
+    - task-phasing

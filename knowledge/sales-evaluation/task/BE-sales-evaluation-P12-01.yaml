@@ -1,0 +1,30 @@
+schema_version: 1
+id: BE-sales-evaluation-P12-01
+kind: task
+title: "Migration: เพิ่ม `Territory` (`name` unique, `code` unique nullable, `regionId` nullable — ป้ายอ้างอิงเท่านั้น ห้ามใช้แทน `Region` ในสูตรศักยภาพ, `sortOrder`, `isActive`, `note`), `TerritoryAssignment…"
+version: 3
+status: approved
+owner: backend-engineer
+module: sales-evaluation
+repo: null
+sensitive: true
+created_at: 2026-08-21T19:55:50.056Z
+updated_at: 2026-08-21T19:56:48.763Z
+sources:
+  - type: file
+    locator: _docs/module/sales-evaluation/plan.md#L214
+    captured_at: 2026-08-21T19:55:50.056Z
+    digest: sha256:236d932d2a11fa36742c046743a59512e2f151e54ac7e9961b4cdb842ce4c332
+    source_id: SRC-_docs-module-sales-evaluation-plan.md
+    note: legacy import (T84) — from a `[x]`/`[ ]` checkbox, not a T52 Status cell — id synthesized from a [tag] prefix — the legacy plan named no BE-/FE- id
+relations: []
+payload:
+  agent: backend-engineer
+  phase: 12
+  tag: backend
+  plan_status: pending
+  produces: []
+  consumes: []
+  contract_version: null
+  orchestrator_task_id: null
+body: "- [ ] [backend] Migration: เพิ่ม `Territory` (`name` unique, `code` unique nullable, `regionId` nullable — ป้ายอ้างอิงเท่านั้น ห้ามใช้แทน `Region` ในสูตรศักยภาพ, `sortOrder`, `isActive`, `note`), `TerritoryAssignment` **นิยามใหม่** (`territoryId`, `salespersonId`, **`isSupervisor Boolean @default(false)`** — **ห้ามสร้าง `enum TerritoryRole` (`OWNER`/`SUPERVISOR`) เด็ดขาด ถูกยกเลิกแล้ว 2026-08-19**, `effectiveFrom`, `effectiveTo`, `assignedById`, `note`, `@@unique([territoryId, salespersonId, effectiveFrom])`, `@@index([salespersonId, isSupervisor, effectiveTo])`), enum `TerritoryLinkSource` (`INFERRED`/`MANUAL`), `HospitalTerritoryChange` (audit อย่างเดียว ไม่มี relation ออก) ลง `schema.prisma` ตาม Data Model ส่วนขยายรอบที่ 3 ทุกตัวอักษร — **ห้ามสร้าง `TerritoryAssignment` แบบเดิมที่ Phase 9 เขียนไว้ก่อนหน้านี้ นี่คือของจริงตัวเดียวที่ implement** ดู Sequencing Notes"
